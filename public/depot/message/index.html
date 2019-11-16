@@ -1,0 +1,61 @@
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+    <a href="/"><I class="fa fa-home"></i> 首页</a>
+    <a>站务</a>
+    <a class="layui-form">
+        <div class="div-select">
+            <select>
+                <option value="/depot/experience">网站历程</option>
+                <option value="/depot/cooperation">合作</option>
+                <option value="/depot/service">客服</option>
+                <option value="/depot/message" disabled selected>留言箱</option>
+            </select>
+        </div>
+    </a>
+</div>
+
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+    <ul class="layui-tab-title">
+        <li><a href="/depot/service">联系我们</a></li>
+        <li class="layui-this">留言箱</li>
+    </ul>
+
+    <div class="layui-tab-content">
+
+		<div id="div_form">
+		    <div class="div-textarea">
+			    <textarea placeholder="欢迎点我留言"></textarea>
+				<div id="TencentCaptcha" data-appid="2003609756" data-cbfn="callback" class="click">
+				    <i class="fa fa-paper-plane-o"></i> 发 送 信 息
+			    </div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<hr />
+		
+<div id="div_list">
+	[[volist name="DepotMessageList" id="data" empty="$empty"]]
+	<div class="div-item">
+		<p><span class="span-user"><i class="fa fa-user"></i> [[$data.user]]</span><span class="span-time">[[$data.time]]</span></p>
+		<p>[[$data.content]]</p>
+        [[if $data.reply]]
+        <p>客服回复：[[$data.reply]]</p>
+        <p style="clear: both"></p>
+        [[/if]]
+	</div>
+	[[/volist]]
+</div>
+
+<hr />
+
+[[$DepotMessageList|raw]]
+
+<div id="div_page_turning">
+    <input type="hidden" class="hidden-pages" value="[[$pages]]" />
+    <input placeholder="输入页码" type="number" class="layui-input" /><a onclick="page_turning()" class="layui-btn layui-btn-primary"><i class="fa fa-paper-plane-o"></i> 翻页</a>
+</div>
+
+<br/>

@@ -1,0 +1,107 @@
+header {
+    padding: 20px 10px;
+    color: #434d5a;
+}
+
+header p {
+    font-size: 12px;
+    color: #88919e;
+    margin-top: 15px;
+}
+
+header p .layui-badge {
+    float: right;
+    position: relative;
+    top: 2px;
+    padding: 1px 3px;
+}
+
+hr {
+    margin: 0;
+}
+
+article {
+    color: #2b3441;
+    padding: 10px;
+    font-size: 16px;
+}
+
+article code {
+    background: #FFFCF2!important;
+    margin: 5px 0;
+    padding: 8px 1px!important;
+    white-space:nowrap;
+    overflow-x: auto;
+    font-family: Courier New;
+}
+
+article small {
+    color: #bfc6d5;
+}
+
+article code small {
+    border-right: rgba(240,240,240,0.3) 1px solid;
+    margin-right: 4px;
+    position: relative;
+    padding: 8px 0;
+    padding-right: 5px;
+}
+
+article .layui-btn {
+    height: 22px;
+    line-height: 22px;
+    font-size: 13px;
+}
+
+article a {
+    color: #35a2ff;
+}
+
+[id*="textarea_copy_"] {
+    position: absolute;
+    z-index: -1;
+}
+
+.a-copy {
+    float: right;
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 6px;
+    color: #adafbd;
+    background: #FFFFFF;
+}
+
+@media only screen and (max-width: 760px) {
+    article code {
+        font-size: 13px;
+    }
+}
+
+/* 翻页 */
+#div_pageTurning {
+}
+
+#div_pageTurning p {
+    font-size: 14px;
+}
+
+#div_pageTurning p a {
+    display: block;
+    padding: 10px;
+    color: #037fff;
+    max-height: 30px;
+}
+#div_pageTurning p a:hover {
+    background: #fafafa;
+}
+
+/* 页底导航按钮 */
+.layui-btn-group {
+    margin-top: 15px;
+    padding: 0 8px;
+}
+
+.layui-btn-group a {
+    width: 33%;
+}

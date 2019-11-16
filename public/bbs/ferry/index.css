@@ -1,0 +1,46 @@
+/*搜索结果*/
+.div-result {
+    padding: 10px 0;
+}
+
+.div-result .div-title {
+    padding: 5px 12px;
+    font-size: 16px;
+    color: #FA6F29;
+}
+
+.div-result .div-title span {
+    display: inline-block;
+    height: 10px;
+    width: 5px;
+    background: #FA6F29;
+    margin-right: 6px;
+}
+
+.div-result a {
+    display: block;
+    background: #fafafa;
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px;
+    margin: 2px 8px 0 8px;
+    padding: 8px 5px;
+    color: #484848;
+}
+
+/*创建新论坛提示*/
+.div-tips {
+    padding: 20px 12px 12px 12px;
+    color: #5F6C76;
+}
+
+.div-tips .div-statement .layui-badge {
+    font-size: 11px;
+    height: 15px;
+    line-height: 15px;
+    padding: 0 5px;
+}
+
+.div-nav {
+    padding: 0 12px;
+}

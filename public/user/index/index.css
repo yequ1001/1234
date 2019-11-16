@@ -1,0 +1,197 @@
+.g-head {
+    position: relative;
+    color: #FFFFFF;
+    font-size: 20px;
+    z-index: 10;
+    padding-bottom: 150px;
+}
+
+.g-head .screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 228px;
+    background: rgba(255,255,255,0.6);
+    z-index: 11;
+}
+
+.g-head .img-background{
+    top: 0;
+	left: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    height: 150px;
+    filter: blur(20px);
+}
+
+.g-head .div-girdle {
+    background: rgba(255,255,255,0.3);
+    position: absolute;
+    top: 44px;
+    left: 0;
+    z-index: 19;
+    height: 76px;
+}
+
+.g-head .div-info {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 20;
+    padding: 0 4px 0 6%;
+}
+
+.g-head .div-info .div-d1 {
+    flex: 1;
+    text-align: center;
+}
+
+.g-head .div-info .div-d1 .img-face {
+    width: 80px;
+    border: rgba(255,255,255,1) 3px solid;
+    border-radius: 100px;
+}
+
+.g-head .div-info .div-d2 {
+    flex: 9;
+    padding: 10px 2px;
+    margin: 14px 0 14px 4px;
+}
+
+.g-head .div-info .div-d2 .p-nickname {
+    color: #343434;
+    font-size: 15px;
+}
+
+.g-head .div-info .div-d2 .p-autograph {
+    color: #707070;
+    font-size: 10px;
+}
+
+/* 导航栏 */
+#div_nav {
+    position: sticky;
+    top: 0;
+    padding: 6px 5%;
+    z-index: 100;
+}
+
+.b2 {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 2px #F7F7F7;
+}
+
+#div_nav a {
+    display: inline-block;
+	position: relative;
+	z-index: 100;
+    font-size: 15px;
+    color: #525264;
+    padding: 0 12px 3px 12px;
+    border-right: #f7f7f7 1px solid;
+}
+
+#div_nav a:hover {
+    color: #5FB878;
+}
+
+#div_nav a:first-child {
+    padding-left: 0;
+}
+
+#div_nav .layui-form-select {
+	position: relative;
+	z-index: 100;
+    display: inline-block;
+    width: 100px;
+}
+
+#div_nav .layui-form-select dd {
+    text-align: center;
+}
+
+#div_nav .layui-form-select dd:first-child {
+	display: none;
+}
+
+#div_nav input {
+    border: 0;
+    background: transparent;
+    height: 28px;
+    font-size: 14px;
+}
+
+#div_nav input::-webkit-input-placeholder {
+    color: #525264;
+}
+
+/*
+ * 对话列表
+ */
+#div_message {
+    position: relative;
+    z-index: 50;
+    font-size: 15px;
+    color: #3b3b3e;
+	padding-bottom: 10px;
+}
+
+.empty {
+    text-align: center;
+    color: #a5a5a5;
+}
+
+#div_message .div-item {
+    display: flex;
+    padding: 13px 5%;
+    border-bottom: #FFFCF5 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#div_message .div-item:hover {
+    background: #FFFCF5;
+}
+
+#div_message .div-item .div-img {
+    flex: 1;
+    text-align: center;
+    max-width: 55px;
+}
+
+#div_message .div-item .div-img img {
+    max-width: 45px;
+    border-radius: 4px;
+}
+
+#div_message .div-item .div-content {
+    flex: 6;
+    padding-left: 6px;
+    line-height: 22px;
+}
+
+[class *= "div-line"] {
+    clear: both;
+}
+
+[class *= "div-line"] span:last-child {
+    float: right;
+}
+
+.div-line1 span:last-child {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.div-line2 span:first-child {
+    color: #8C8CA1;
+    font-size: 12px;
+}
+
+.div-line2 span:last-child {
+    color: #8C8CA1;
+    font-size: 12px;
+    margin-top: 1px;
+}

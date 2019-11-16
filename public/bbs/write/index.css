@@ -1,0 +1,109 @@
+.div-header {
+    padding: 0 11px;
+    height: 50px;
+    line-height: 50px;
+}
+.div-header .img-face {
+    height: 14px;
+    border-radius: 10px;
+	position: relative;
+	top: -1px;
+}
+.div-header .div-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #50525A;
+    padding-top: 2px;
+}
+.div-header .div-user {
+    color: #646771;
+    text-align: right;
+    font-size: 12px;
+	position: relative;
+	top: 1px;
+}
+
+.p-keywords {
+	color: #79BC55;
+	padding: 0 12px;
+}
+
+.div-form {
+    padding: 12px;
+}
+
+.div-form .div-title {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: #EEEEEE 1px solid;
+}
+
+.div-form .div-title .div-title-tips {
+    background: #FCFCFC;
+}
+
+.div-form .div-title .input-title {
+    width: 98%;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    padding: 0 1px;
+    border: 0;
+    font-size: 15px;
+}
+
+.div-form .div-textarea {
+    border: #EEEEEE 1px solid;
+}
+.div-form .div-content-p {
+    background: #FCFCFC;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.div-form .div-content {
+    padding: 3px 5px;
+    border: 0;
+}
+
+.div-form .div-content .diy-img {
+    width: 100px;
+    border-radius: 2px;
+}
+
+.div-form .div-insert {
+    border-top: #fafafa 1px solid;
+}
+.div-form .div-insert .div-insert-img button {
+    background: transparent;
+    color: #6A6A6A;
+    padding: 0;
+    margin: 0;
+    height: 32px;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.div-form .div-insert .div-insert-send {
+    text-align: right;
+}
+.div-form .div-insert .div-insert-send button {
+    height: 26px;
+    line-height: 26px;
+    margin-top: 3px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/*编辑按钮*/
+.div-edit {
+    padding: 12px;
+}
+
+.layui-layer-page .layui-layer-content img {
+    margin-left: 8px;
+    margin-bottom: 3px;
+}

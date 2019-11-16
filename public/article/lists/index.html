@@ -1,0 +1,72 @@
+[[extend name="template" /]]
+
+菜单栏：
+[[block name="page_menu"]]
+    <i class="fa fa-book"></i> 养植手册
+    <a href="/"><i class="fa fa-close"></i></a>
+[[/block]]
+
+页面主体：
+[[block name="page_main"]]
+<ul id="ul_nav" class="nav nav-pills nav-justified">
+    <li class="nav-item [[php]]if(input('type') == 'aquatic')echo 'on';[[/php]]" onclick="location='/article/aquatic'">
+        +水生
+    </li>
+    <li class="nav-item [[php]]if(input('type') == 'flower')echo 'on';[[/php]]" onclick="location='/article/flower'">
+        +花卉
+    </li>
+    <li class="nav-item [[php]]if(input('type') == 'succulent')echo 'on';[[/php]]" onclick="location='/article/succulent'">
+        +多肉
+    </li>
+    <li class="nav-item [[php]]if(input('type') == 'leaf')echo 'on';[[/php]]" onclick="location='/article/leaf'">
+        +绿植
+    </li>
+</ul>
+
+<!-- 文章列表 -->
+<div id="article-list" class="text-justify">
+    [[volist name='list' id='article']]
+    <div id="article-item-[[$article.id]]" onclick="location.href='/article/[[$article.id]]'">
+        <!-- 当前文章有3个以上图片 -->
+        [[if (mb_strlen($article.files) > 185) ]]
+        <div class="title">[[$article.title]]</div>
+        <div class="content text-muted small">[[$article.content]]</div>
+        <div class="img3 d-flex justify-content-between">[[$article.files]]</div>
+        <!-- 当前文章信息 -->
+        <div class="info d-flex justify-content-between text-muted small flex-fill">
+            <div><i class="fa fa-user-o"></i> 佚名[[$article.user]]</div>
+            <div><i class="fa fa-commenting-o"></i> [[$article.replyNum]]　<i class="fa fa-eye"></i> [[$article.clickNum]]</div>
+        </div>
+
+        <!-- 当前项1个图片 -->
+        [[elseif (mb_strlen($article.files) > 1) /]]
+        <div class="title">[[$article.title]]</div>
+        <div class="content-img d-flex align-content-start">
+            <div class="content  text-muted small">[[$article.content]]</div>
+            <div class="img1 flex-grow-1">[[$article.files]]</div>
+        </div>
+        <!-- 当前文章信息 -->
+        <div class="info d-flex justify-content-between text-muted small flex-fill">
+            <div><i class="fa fa-user-o"></i> 佚名[[$article.user]]</div>
+            <div><i class="fa fa-commenting-o"></i> [[$article.replyNum]]　<i class="fa fa-eye"></i> [[$article.clickNum]]</div>
+        </div>
+
+        <!-- 当前文章没有图片 -->
+        [[else /]]
+        <div class="title">[[$article.title]]</div>
+        <div class="content text-muted small">[[$article.content]]</div>
+        <!-- 当前文章信息 -->
+        <div class="info d-flex justify-content-between text-muted small flex-fill">
+            <div><i class="fa fa-user-o"></i> 佚名[[$article.user]]</div>
+            <div><i class="fa fa-commenting-o"></i> [[$article.replyNum]]　<i class="fa fa-eye"></i> [[$article.clickNum]]</div>
+        </div>
+        [[/if]]
+    </div>
+    [[/volist]]
+</div>
+
+<div id="div_exit" class="text-center">
+    <a href="/">网站首页</a>
+</div>
+
+[[/block]]

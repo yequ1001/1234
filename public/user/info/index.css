@@ -1,0 +1,22 @@
+#div_nav {
+    padding: 10px 20px;
+    position: fixed;
+    background: rgba(255,255,255,0.95);
+    z-index: 100;
+}
+
+#div_face {
+    padding: 80px 8% 20px 8%;
+}
+
+#div_face .img-face {
+    max-width: 90px;
+    border-radius: 3px;
+    border: #f8f8f8 1px solid;
+    padding: 3px;
+}
+
+#div_table {
+    margin: 0 4%;
+
+}

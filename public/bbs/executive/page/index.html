@@ -1,0 +1,45 @@
+<div id="div_top" class="kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/bbs/[[$type]]"><i class="fa fa-home"></i> [[$typeName]]</a>
+        <a href="/bbs/[[$type]]/executive">管理员</a>
+        <a><cite>页面设计</cite></a>
+    </span>
+</div>
+
+<div style="height: 50px"></div>
+
+<div class="layui-tab layui-tab-brief">
+    <ul class="layui-tab-title">
+        <li class="layui-this">页头设计</li>
+        <li>页底设计</li>
+    </ul>
+    <div class="layui-tab-content">
+        <!--选项卡1-->
+        <div class="layui-tab-item layui-show">
+            <p class="p-explain">
+                论坛<b>头部</b>的内容排版，<span style="color: #ff4e0d">万万请注意：如果不是写html标签，内容中千万不要使用&gt;和&lt;号，这会导致部分浏览器页面显示不正常。</span>
+            </p>
+            <p class="p-explain">
+                建议，如果需要使用颜色等特效字，先在电脑word文档编辑，再拷贝到此保存。
+            </p>
+            <div class="textarea-header layui-textarea" contenteditable="true">[[$headerContent]]</div>
+            <div class="layui-btn-container">
+                <button onclick="show('.textarea-header')" class="layui-btn layui-btn-radius layui-btn-warm"><i class="fa fa-desktop"></i> 预 览</button>
+                <button onclick="send('.textarea-header')" class="layui-btn layui-btn-radius layui-btn-normal"><i class="fa fa-cloud-upload"></i> 更 新</button>
+            </div>
+        </div>
+        <!--选项卡2-->
+        <div class="layui-tab-item">
+            <p class="p-explain">论坛<b>底部</b>的内容排版，<span style="color: #ff4e0d">万万请注意：如果不是写html标签，内容中千万不要使用&gt;和&lt;号，这会导致部分浏览器页面显示不正常。</span>
+            </p>
+            <p class="p-explain">
+                建议，如果需要使用颜色等特效字，先在电脑word文档编辑，再拷贝到此保存。
+            </p>
+            <div class="textarea-footer layui-textarea" contenteditable="true">[[$footerContent]]</div>
+            <div class="layui-btn-container">
+                <button onclick="show('.textarea-footer')" class="layui-btn layui-btn-radius layui-btn-warm"><i class="fa fa-desktop"></i> 预 览</button>
+                <button onclick="send('.textarea-footer')" class="layui-btn layui-btn-radius layui-btn-normal"><i class="fa fa-cloud-upload"></i> 更 新</button>
+            </div>
+        </div>
+    </div>
+</div>

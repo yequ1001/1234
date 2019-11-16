@@ -1,0 +1,30 @@
+<div id="div_nav" class="kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/"><i class="fa fa-home"></i> 首页</a>
+        <a href="/user">用户中心</a>
+        <a><cite>重新取名</cite></a>
+    </span>
+</div>
+
+<div id="div_select" class="layui-form">
+    <select name="info">
+        <option value="">更多信息设置</option>
+        <option value="/user/face">头像设置</option>
+        <option value="/user/autograph">我的签名</option>
+        <option value="/user/rename" disabled>重新取名 ←</option>
+        <option value="/user/password">登录密码</option>
+        <option value="/user/password2">安全密码</option>
+    </select>
+</div>
+
+<div id="div_border">
+    <div class="div-prompt">
+        <p>名字不可以用特殊符号，最多8字</p>
+        <p>每60天只能改名一次，亲爱的请多考虑 !</p>
+    </div>
+
+    <div class="div-form">
+        <input class="input-nickname" value="[[:$nickname]]" />
+        <a onclick="rename()">确定更改</a>
+    </div>
+</div>

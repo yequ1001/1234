@@ -1,0 +1,92 @@
+<div id="div_header">
+    <p class="title">勤 话 网 导 航</p>
+</div>
+
+<div class="div-ReplyTime">
+    <hr/>
+    [[volist name="getReplyTime" id="vo" empty="$empty"]]
+    <div class="div-link">
+        <p class="p-link-name"><span></span><a href="http://[[$vo.url]]" target="_blank">[[$vo.name]]</a></p>
+        <p class="p-link-description">[[$vo.description]]</p>
+    </div>
+    <!--<span class="collect" onclick="collect([[$vo.id]])"><i class="fa fa-heart"></i> 收藏</span>-->
+    [[/volist]]
+    <hr/>
+</div>
+
+<div class="div-type-blog">
+    <h1><span></span>博客</h1>
+    <div class="div-a-group">
+        [[volist name="getBlog" id="vo" empty="$empty"]]
+        <a href="http://[[$vo.url]]" target="_blank"><img src="[[$vo.logo]]" onerror="this.src='/public/static/img/default_ico.ico'"/>[[$vo.name]]</a>
+        [[/volist]]
+    </div>
+    <hr/>
+</div>
+
+<div class="div-type-blog">
+    <h1><span></span>论坛</h1>
+    <div class="div-a-group">
+        [[volist name="getBBS" id="vo" empty="$empty"]]
+        <a href="http://[[$vo.url]]" target="_blank"><img src="[[$vo.logo]]" onerror="this.src='/public/static/img/default_ico.ico'"/>[[$vo.name]]</a>
+        [[/volist]]
+    </div>
+    <hr/>
+</div>
+
+<div class="div-type-article">
+    <h1><span></span>文章</h1>
+    <div class="div-a-group">
+        [[volist name="getArticle" id="vo" empty="$empty"]]
+        <a href="http://[[$vo.url]]" target="_blank"><img src="[[$vo.logo]]" onerror="this.src='/public/static/img/default_ico.ico'"/>[[$vo.name]]</a>
+        [[/volist]]
+    </div>
+    <hr/>
+</div>
+
+<div class="div-type-navigation">
+    <h1><span></span>导航</h1>
+    <div class="div-a-group">
+        [[volist name="getNavigation" id="vo" empty="$empty"]]
+        <a href="http://[[$vo.url]]" target="_blank"><img src="[[$vo.logo]]" onerror="this.src='/public/static/img/default_ico.ico'"/>[[$vo.name]]</a>
+        [[/volist]]
+    </div>
+    <hr/>
+</div>
+
+<div class="div-type-other">
+    <h1><span></span>其他</h1>
+    <div class="div-a-group">
+        [[volist name="getOther" id="vo" empty="$empty"]]
+        <a href="http://[[$vo.url]]" target="_blank"><img src="[[$vo.logo]]" onerror="this.src='/public/static/img/default_ico.ico'"/>[[$vo.name]]</a>
+        [[/volist]]
+    </div>
+    <hr/>
+</div>
+
+<div class="layui-card">
+    <div class="div-form" style="display: none">
+        <p>标题：</p>
+        <p><input class="layui-input input-title" autocomplete="off" placeholder="可留空" /></p>
+        <p>网址：</p>
+        <p><input class="layui-input input-url" autocomplete="off" value="http://" type="search" /></p>
+        <p><a onclick="save()" class="layui-btn layui-btn-normal">确认添加</a></p>
+    </div>
+    <div class="div-updateForm" style="display: none">
+        <p>标题：</p>
+        <p><input class="layui-input input-title" autocomplete="off" type="search" placeholder="可留空" /></p>
+        <p>网址：</p>
+        <p><input class="layui-input input-url" autocomplete="off" type="search" placeholder="无需http开头" /></p>
+        <p>
+            <a onclick="del()" class="layui-btn layui-btn-warm">删除</a>
+            <a onclick="update()" class="layui-btn layui-btn-normal update">修改</a>
+            <a onclick="goto()" class="layui-btn">访问</a>
+        </p>
+    </div>
+</div>
+
+
+<div id="div_footer" class="auto-width">
+    <p><a href="/">首页</a> | <a href="/depot/cooperation.html">友链合作</a> | <a href="/depot/message.html">站内留言</a> | <a href="/depot/developer.html">开发笔记</a> | <a href="http://i.op112.cn">本机</a></p>
+    <p>Op112.Com 鄂ICP备18004897号-1</p>
+</div>

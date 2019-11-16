@@ -1,0 +1,31 @@
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 12px;
+    color: #2770ec;
+    z-index: 100;
+}
+
+#div_list {
+	margin-top: 60px;
+	padding: 0 5%;
+}
+
+#div_list p {
+	font-size: 16px;
+	color: #8B8B95;
+}
+
+tr td:first-child {
+	font-size: 15px;
+}
+
+tr td:last-child {
+	text-align:center;
+}
+
+tr td a {
+    height: 26px!important;
+	line-height: 26px!important;
+}

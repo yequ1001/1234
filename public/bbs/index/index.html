@@ -1,0 +1,29 @@
+<form action="/bbs/ferry" method="POST" class="form-header layui-form">
+    <p class="form-p-tips"></p>
+	<div class="div-yuan1"></div>
+	<div class="div-yuan2"></div>
+    <div class="div-input">
+        <input class="input-keywords" placeholder="输入关键词，搜索我想讨论的话题" autocomplete="off" name="keywords" />
+        <button onclick="send()" class="form-button layui-btn"><i class="fa fa-search"></i></button>
+    </div>
+</form>
+
+<div class="div-official">
+    <div class="div-title kyy"><i class="fa fa-flag-checkered"></i> 主流论坛</div>
+    <div class="div-official-item">
+        [[volist name="BbsMainData" id="data"]]
+        <a href="/bbs/[[$data.id]].html">[[$data.name]]</a>
+        [[/volist]]
+    </div>
+</div>
+
+<br/>
+
+<div class="div-rand">
+    <div class="div-title kyy"><i class="fa fa-flag-o"></i> 随便看看</div>
+    <div class="div-rand-item">
+        [[volist name="BbsData" id="data"]]
+        <a href="/bbs/[[$data.id]].html">[[$data.name]]</a>
+        [[/volist]]
+    </div>
+</div>

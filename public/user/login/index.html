@@ -1,0 +1,26 @@
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<div class="layui-tab layui-tab-brief">
+    <ul class="layui-tab-title">
+        <li><a href="/">首页</a></li>
+        <li class="layui-this">登录</li>
+        <li><a href="/user/register">注册</a></li>
+    </ul>
+</div>
+
+<p id="p_help" style="color: #FFB800; text-align: center; margin: 20px 0;">[[$help]]</p>
+
+<div id="div_form">
+    <div id="div_username">
+        <p class=""><i class="fa fa-user-o"></i> 用户名/手机号：</p>
+        <p class=""><input id="input_username" class="layui-input" autocomplete="off" /></p>
+    </div>
+
+    <div id="div_password">
+        <p class=""><i class="fa fa-key"></i> 登录密码：</p>
+        <p class=""><input id="input_password" class="layui-input" autocomplete="off" type="password" /></p>
+    </div>
+
+    <p class="p-p" style="color: #FFB800">如果是首次登陆，登录密码是您的手机号，请注意及时修改！</p>
+
+    <a class="layui-btn layui-btn-sm layui-btn-normal" id="TencentCaptcha" data-appid="2003609756" data-cbfn="callback">登　录</a>
+</div>

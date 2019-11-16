@@ -1,0 +1,108 @@
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 12px;
+    color: #2770ec;
+    z-index: 100;
+}
+
+#div_nav small {
+    color: #afafaf;
+}
+
+.layui-tab {
+    padding: 55px 0 15px 0;
+}
+
+.layui-tab-title {
+    padding: 0 5%;
+}
+
+.layui-tab-title li {
+    color: #6A6A6A;
+}
+
+.layui-tab-content2 {
+    padding: 15px 0 0 0;
+}
+
+.layui-tab-item .item {
+    padding: 3px 5%;
+}
+
+/* 我的历史今天 */
+#div_myHistory .item .title {
+    padding-bottom: 2px;
+	margin-top: 6px;
+    color: #c9c9c9;
+}
+
+#div_myHistory .item .content {
+    display: flex;
+}
+
+#div_myHistory .item .content p:first-child {
+    flex: 3;
+}
+
+#div_myHistory .item .content p:last-child {
+    flex: 1;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 13px;
+}
+
+#div_myHistory small {
+    display: block;
+    font-size: 15px;
+    color: #CCC9D3;
+    padding: 10px 5% 0 5%;
+}
+
+/* 世界历史今天 */
+#div_worldHistory {
+}
+
+#div_worldHistory .item {
+    padding: 5px 5%;
+}
+
+#div_worldHistory .item:hover {
+    background: #F8F9F9;
+}
+#div_worldHistory .item:active {
+    background: #F8F9F9;
+}
+
+#div_worldHistory .item .title {
+    display: flex;
+    cursor: pointer;
+}
+
+#div_worldHistory .item .title p:first-child {
+    flex: 1;
+    max-width: 65px;
+    color: #c9c9c9;
+}
+
+#div_worldHistory .item .title p:last-child {
+    flex: 5;
+    color: #4889FF;
+}
+
+#div_worldHistory .item .content {
+    display: none;
+}
+
+.layui-layer-page .layui-layer-content2 {
+	padding: 12px;
+	font-size: 16px;
+}
+
+.p-end {
+    color: #D6D6D6;
+    margin: 15px 0;
+    font-size: 13px;
+}
+

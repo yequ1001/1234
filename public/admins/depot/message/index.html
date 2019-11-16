@@ -1,0 +1,33 @@
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+    <a href="/admins"><i class="fa fa-cubes"></i> 管理中心</a>
+    <a><cite>用户留言管理</cite></a>
+</div>
+
+<div id="div_form">
+    <input autocomplete="off" type="number" placeholder="起始id" class="layui-input input-min" /> -
+    <input autocomplete="off" type="number" placeholder="结束id" class="layui-input input-max" />
+    <a class="layui-btn layui-btn-normal" onclick="batchDelete()">批量删除</a>
+</div>
+
+<div id="div_list">
+    [[volist name="DepotMessageList" id="data" empty="$empty"]]
+    <div class="div-item item-[[$data.id]]">
+        <p><span class="span-id">[[$data.id]]. </span><span class="span-user">[[$data.user]]</span><span class="span-time">[[$data.time]]</span></p>
+        <p>[[$data.content]]</p>
+        <p>管理回复：<span class="reply-[[$data.id]]">[[$data.reply]]</span></p>
+        <p><a onclick="reply([[$data.id]])">回复</a> | <a onclick="del([[$data.id]])">删除</a> </p>
+    </div>
+    <hr/>
+    [[/volist]]
+</div>
+
+<hr />
+
+[[$DepotMessageList|raw]]
+
+<div id="div_page_turning">
+    <input type="hidden" class="hidden-pages" value="[[$pages]]" />
+    <input placeholder="输入页码" type="number" class="layui-input" /><a onclick="page_turning()" class="layui-btn layui-btn-primary"><i class="fa fa-paper-plane-o"></i> 翻页</a>
+</div>
+
+<br/>

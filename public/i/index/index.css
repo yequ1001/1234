@@ -1,0 +1,14 @@
+div {
+    padding: 0 5%;
+}
+
+.ip-server-info, .ip-remote-info {
+    display: block;
+    text-align: right;
+    color: #838395;
+    font-size: 14px;
+}
+
+p {
+    margin-top: 20px;
+}

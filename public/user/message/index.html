@@ -1,0 +1,72 @@
+<!--
+    标题栏
+    -->
+<div id="title" class="auto-width">
+    <div id="onlineState">
+	    　
+	</div>
+    <div id="pages" onclick="skip()" class="click">
+	    1/1
+	</div>
+    <div class="div-fun-select layui-form">
+		[[if input("iframe")]]
+        <select>
+            <option value="">退出</option>
+            <option value="/user?iframe=true">用户中心</option>
+        </select>
+        [[elseif input("referer") /]]
+        <select>
+            <option value="">退出</option>
+            <option value="/user?iframe=true">用户中心</option>
+            <option value="[[:input('referer')]]">退出对话</option>
+        </select>
+		[[else /]]
+        <select>
+            <option value="">退出</option>
+            <option value="/">网站首页</option>
+            <option value="/diary/month">勤话日记</option>
+            <option value="/user">用户中心</option>
+            <option value="/user/search">搜索用户</option>
+        </select>
+		[[/if]]
+    </div>
+</div>
+
+<!--
+    翻页导航
+    -->
+<div id="skip" class="auto-width kyy">
+    <input type="range" name="points" min="1" max="10">
+</div>
+
+<!--
+    对话列表
+    -->
+<div id="list" data-final-time="">
+    <div style="padding: 150px 0; color: #9ba1a0; text-align: center">
+        <i class="fa fa-refresh fa-spin"></i><br/>
+        加载中
+    </div>
+</div>
+
+<!--
+    表单模态框
+    -->
+<div id="div_form">
+    <div class="div-input">
+        <textarea placeholder="在此输入"></textarea>
+        <p class="p-txtCount">共<span id="textCount">0</span>字</p>
+        <input type="hidden" id="to" value="[[:$to]]" />
+    </div>
+    <a id="a" onclick="post()" class="layui-btn layui-btn-normal">发 送</a>
+</div>
+
+<!--
+    向下滚动快捷键
+    -->
+<div id="toBottom"></div>
+
+<!--
+    表单模态开关
+    -->
+<i id="i_form_btn" class="fa fa-edit" onclick="openForm()"></i>

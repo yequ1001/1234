@@ -1,0 +1,100 @@
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 12px;
+    z-index: 100;
+}
+
+/* 批量删除 */
+#div_form {
+    padding: 50px 10px 20px 10px;
+}
+#div_form input {
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+}
+#div_form a {
+    position: relative;
+    top: -1px;
+    height: 30px;
+    line-height: 30px;
+}
+
+/* 留言列表 */
+.div-item {
+    padding: 0 3%;
+}
+
+.span-time {
+    position: absolute;
+    right: 3%;
+}
+
+/* 操作按钮 */
+a {
+    color: #339aff;
+}
+/* 分 页 */
+.pagination {
+    margin: 15px 5% 0 5%;
+    display: flex;
+}
+
+.pagination li, .pagination a, .pagination li .active {
+    float: left;
+    flex: 1;
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 1px;
+    text-align: center;
+}
+
+.pagination li a {
+    padding: 3px 2px;
+    width: 100%;
+    background: #F9F9F9;
+    color: #868686;
+    border-radius: 4px;
+}
+.pagination li a:hover {
+    background: #FFFFFC;
+    border: #f9f9f9 1px solid;
+    height: 17px;
+}
+
+.pagination .disabled, .pagination .active {
+    flex: 1;
+    border: #f9f9f9 1px solid;
+    margin-left: 1px;
+    border-radius: 4px;
+    height: 17px;
+}
+
+.pagination .active {
+    padding: 3px 2px;
+    color: #5FB878;
+}
+
+#div_page_turning {
+    display: flex;
+    margin: 8px 5% 0 5%;
+    border-bottom: #f9f9f9 1px solid;
+}
+
+#div_page_turning input {
+    flex: 3;
+    height: 30px;
+    text-align: center;
+    border: 0;
+}
+
+#div_page_turning a {
+    flex: 1;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+}

@@ -1,0 +1,42 @@
+.div-header {
+    position: fixed;
+    z-index: 100;
+    padding: 0 12px;
+    height: 40px;
+    line-height: 40px;
+    background: linear-gradient(#f9f9f9, #ffffff);
+}
+
+.div-roster {
+    padding: 12px;
+}
+
+.p-title {
+    text-align: center;
+    font-size: 17px;
+    padding: 12px;
+    padding-top: 0;
+}
+
+.p-t {
+    background: #fafafa;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.p-people {
+    padding: 12px 8px;
+}
+
+.div-a-group {
+    padding: 12px;
+}
+
+.div-a-group a {
+    font-size: 14px;
+}
+
+.div-a-group hr {
+    margin-bottom: 18px;
+}

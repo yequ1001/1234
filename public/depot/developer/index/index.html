@@ -1,0 +1,37 @@
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+    <a href="/"><I class="fa fa-home"></i> 首页</a>
+    <a href="/links">网址导航</a>
+    <a><cite>开发者笔记</cite></a>
+</div>
+<br/>
+<br/>
+<br/>
+
+<header>
+    平时PHP开发过程中有一些比较高频率用到的东西，总是到处翻笔记很麻烦，索性就集中整理到网站中来吧。<br/>
+    同时也欢迎你分享一些web前后端的代码，共同进步，welcome.
+</header>
+
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+    <ul class="layui-tab-title">
+        <li>后端</li>
+        <li>前端</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item">
+            [[volist name="server_note" id="vo"]]
+            <a href="/depot/developer/[[$vo.type]]/[[$vo.id]].html" class="click">[[$i]]. [[$vo.title]]</a>
+            [[/volist]]
+        </div>
+        <div class="layui-tab-item">
+            [[volist name="client_note" id="vo"]]
+            <a href="/depot/developer/[[$vo.type]]/[[$vo.id]].html" class="click">[[$i]]. [[$vo.title]]</a>
+            [[/volist]]
+        </div>
+    </div>
+</div>
+
+<div class="layui-btn-group">
+    <a href="/depot/developer/write" class="layui-btn">添加笔记</a>
+    <a href="/" class="layui-btn layui-btn-primary">网站首页</a>
+</div>

@@ -1,0 +1,118 @@
+#page_main {
+    background: #FFFFFF;
+}
+
+#div_nav {
+    padding: 10px 20px;
+    position: fixed;
+    background: rgba(255,255,255,0.95);
+    z-index: 100;
+}
+
+#div_background {
+    background-image: url("/public/user/bg_0.jpg");
+    background-size: 100% 350px;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 350px;
+}
+
+#div_form {
+    display: flex;
+    padding: 50px 5% 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+#div_form select {
+    flex: 1;
+    border: #e0e0e0 1px solid;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-right: 0;
+    height: 35px;
+    font-size: 14px;
+    max-width: 140px;
+    padding-left: 2%;
+    color: #5f5f5f;
+}
+
+#div_form input {
+    flex: 2;
+    border: #e0e0e0 1px solid;
+    border-left: 0;
+    border-right: 0;
+    padding-top: 2px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+#div_form a {
+    flex: 2;
+    max-width: 80px;
+    text-align: center;
+    display: inline-block;
+    background: #1E9FFF;
+    color: #FFFFFF;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor:pointer;
+}
+
+#div_list {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+#div_list .load {
+    padding: 7%;
+    text-align: center;
+    color: #8695A5;
+}
+
+#div_list .div-item {
+    display: flex;
+    border-bottom: #F9F9F9 1px solid;
+    padding: 10px 4%;
+    min-height: 45px;
+    cursor:pointer;
+}
+
+#div_list .div-item:hover {
+    background: rgba(240,240,240,0.4);
+}
+
+#div_list .div-item .div-img {
+    flex: 1;
+    max-width: 60px;
+    text-align: center;
+}
+
+#div_list .div-item .div-img img {
+    max-width: 45px;
+    border-radius: 4px;
+}
+
+#div_list .div-item .div-nickname {
+    flex: 4;
+    padding: 2px 0;
+}
+
+#div_list .div-item .div-nickname .autograph{
+    font-size: 13px;
+    color: #6b6b6b;
+}
+
+#div_list .div-item .layui-badge {
+    display: none;
+    float: right;
+}

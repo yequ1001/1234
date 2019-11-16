@@ -1,0 +1,45 @@
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 2px 12px;
+    z-index: 100;
+}
+
+.div-select {
+    display: inline-block;
+    width: 60px;
+}
+
+.div-select dd {
+    color: #444444;
+}
+
+.div-select input {
+    border: 0;
+    padding: 0;
+}
+
+.layui-tab {
+    margin: 0 5%;
+    padding-top: 60px;
+    padding-bottom: 25px;
+}
+
+.layui-tab-content h2 {
+    color: #D1D1D1;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.layui-tab-content ul li {
+    margin: 15px 0;
+    font-size: 17px;
+    text-align: justify;
+}
+
+.layui-btn {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+}

@@ -1,0 +1,35 @@
+#div_top {
+    padding: 10px;
+    position: fixed;
+    background: rgba(255,255,255,0.95);
+    z-index: 100;
+}
+
+.div_form {
+    padding: 50px 12px 12px 12px;
+}
+
+.div_form .div-item {
+    padding: 10px 0;
+    color: #4B6283;
+}
+
+.div_form .div-item .div-contont {
+    padding: 5px 0 10px 0;
+}
+
+.div_form .div-item .layui-input {
+    height: 30px;
+    line-height: 30px;
+    color: #6F7681;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.div_form .div-item .layui-input:hover {
+    background: #FFFCF5;
+}
+
+.layui-btn-container {
+    padding: 12px;
+}

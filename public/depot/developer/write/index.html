@@ -1,0 +1,44 @@
+<br/>
+
+<h2>
+    所有的代码都应该写在UBB：[code] [/code]之间
+</h2>
+
+<br/><br/>
+
+<div id="div_form" class="layui-form">
+    <input class="input-id" type="hidden" value="[[$noteId]]" />
+
+    <input class="input-title layui-input" autocomplete="off" value="[[$noteTitle]]" placeholder="标题" />
+    <br/>
+
+    <textarea placeholder="内容" class="layui-textarea">[[$noteContent]]</textarea>
+    <br/>
+
+    <select class="select-type">
+        <option value="">笔记分类</option>
+        <option value="server">后端</option>
+        <option value="client">前端</option>
+    </select>
+    <br/>
+
+    <select class="select-belong">
+        <option value="">笔记来源</option>
+        <option value="原创">原创</option>
+        <option value="网络">网络</option>
+        <option value="改编">改编</option>
+    </select>
+    <br/>
+
+    <p style="text-align: center">
+        <a onclick="insertCode()" style="width: 20%" class="layui-btn layui-btn-warm">插入代码</a>
+        <a onclick="insertHtml()" style="width: 20%" class="layui-btn layui-btn-warm">插入html</a>
+        <a onclick="save()" style="width: 40%" class="layui-btn layui-btn-normal"><i class="fa fa-paper-plane-o"></i> 提 交</a>
+    </p>
+</div>
+
+<br/>
+
+<a href="/depot/developer" style="width: 100%" class="layui-btn layui-btn-primary">返回上级</a>
+
+<br/>

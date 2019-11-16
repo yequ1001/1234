@@ -1,0 +1,93 @@
+body {
+    font-size: 14px;
+}
+
+#page_main {
+    background: #FFFFFF;
+}
+
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 12px;
+    color: #2770ec;
+    z-index: 100;
+
+}
+
+.div-btn-group {
+    position: fixed;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.div-btn-group a {
+    float: right;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    border-radius: 99px;
+}
+
+h1 {
+    padding: 60px 2% 8px 3%;
+    font-size: 17px;
+}
+
+h1 .username {
+    display: inline-block;
+    float: right;
+    color: #7f7f7f;
+    font-size: 13px;
+    position: relative;
+    bottom: -6px;
+}
+
+table {
+    width: 96%;
+    border-collapse: collapse;
+    margin: 0 2%;
+}
+
+tr:hover {
+    background: #fafafa;
+}
+
+td {
+    border: #eeebf5 1px solid;
+    padding: 3px;
+}
+
+.date {
+    width: 14%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.weekend {
+	color: #A2C190;
+}
+
+.content1 {
+    width: 60%;
+	font-size: 14px;
+}
+
+.content2 {
+    width: 16%;
+    font-size: 12px;
+    text-align: center;
+}
+
+hr {
+    width: 85%;
+    background: #F7F7FA;
+    height: 1px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    bottom: 5px;
+    border: 0;
+}
+

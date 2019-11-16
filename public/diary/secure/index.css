@@ -1,0 +1,17 @@
+#page_main {
+    background: #FCFCFC;
+}
+
+.layui-card {
+    margin: 20% 10%;
+}
+
+.layui-card #div_form {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.layui-card #div_form a {
+    margin-top: 15px;
+    width: 90px;
+}

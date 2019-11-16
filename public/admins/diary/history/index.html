@@ -1,0 +1,82 @@
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+  <a href="/admins"><i class="fa fa-cubes"></i> 管理中心</a>
+  <a><cite>世界历史纪录修改器</cite></a>
+</div>
+
+<div id="div_date_select" class="layui-form">
+  <select class="select-month">
+    <option value="1">01月</option>
+    <option value="2">02月</option>
+    <option value="3">03月</option>
+    <option value="4">04月</option>
+    <option value="5">05月</option>
+    <option value="6">06月</option>
+    <option value="7">07月</option>
+    <option value="8">08月</option>
+    <option value="9">09月</option>
+    <option value="10">10月</option>
+    <option value="11">11月</option>
+    <option value="12">12月</option>
+  </select>
+  <select class="select-day">
+    <option value="1">01日</option>
+    <option value="2">02日</option>
+    <option value="3">03日</option>
+    <option value="4">04日</option>
+    <option value="5">05日</option>
+    <option value="6">06日</option>
+    <option value="7">07日</option>
+    <option value="8">08日</option>
+    <option value="9">09日</option>
+    <option value="10">10日</option>
+    <option value="11">11日</option>
+    <option value="12">12日</option>
+    <option value="13">13日</option>
+    <option value="14">14日</option>
+    <option value="15">15日</option>
+    <option value="16">16日</option>
+    <option value="17">17日</option>
+    <option value="18">18日</option>
+    <option value="19">19日</option>
+    <option value="20">20日</option>
+    <option value="21">21日</option>
+    <option value="22">22日</option>
+    <option value="23">23日</option>
+    <option value="24">24日</option>
+    <option value="25">25日</option>
+    <option value="26">26日</option>
+    <option value="27">27日</option>
+    <option value="28">28日</option>
+    <option value="29">29日</option>
+    <option value="30">30日</option>
+    <option value="31">31日</option>
+  </select>
+  <a onclick="openDate()" class="layui-btn layui-btn-normal">打开</a>
+</div>
+
+<br/><br/>
+
+<hr style="clear: both" />
+
+<div id="div_history" class="layui-form">
+    [[volist name="history" id="data"]]
+    <div class="item">
+        <div class="title title-[[$data.id]]">
+            <p>
+                <select>
+                    <option value="">操作</option>
+                    <option value="save-[[$data.id]]">保存</option>
+                    <option value="del-[[$data.id]]">删除</option>
+                </select>
+                <span class="date">[[$data.date]]</span>年
+            </p>
+            <p contenteditable="true">
+                [[$data.title]]
+            </p>
+        </div>
+        <div class="content content-[[$data.id]]" contenteditable="true">
+            [[$data.content]]
+        </div>
+    </div>
+    [[/volist]]
+</div>

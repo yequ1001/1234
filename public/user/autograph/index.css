@@ -1,0 +1,57 @@
+#page_main {
+    background-image: url("/public/user/bg_0.jpg");
+    background-size: 100% 350px;
+    background-repeat:no-repeat;
+}
+
+#div_nav {
+    padding: 10px 20px;
+    position: fixed;
+    background: rgba(255,255,255,0);
+    z-index: 100;
+}
+
+#div_select {
+    padding: 50px 5% 10px 5%;
+}
+
+#div_select input {
+    background: rgba(255,255,255,0.6);
+}
+
+#div_select input::-webkit-input-placeholder {
+    color: #7C7C7C;
+}
+
+#div_form {
+    margin: 16% 5% 0 5%;
+    background: rgba(241,245,246,0);
+    color: #6A7C8B;
+    text-align: center;
+}
+
+#div_form p:first-child {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#div_form textarea {
+    border: #EAF0F2 1px solid;
+    background: rgba(255,255,255,0.4);
+    color: #4D5F6C;
+    padding: 5px 2%;
+    height: 50px;
+    width: 96%;
+}
+
+#div_form a {
+    display: inline-block;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 10px 0 0 0;
+    background: #7C8B95;
+    border-radius: 4px;
+    padding: 5px 0;
+    width: 100%;
+}

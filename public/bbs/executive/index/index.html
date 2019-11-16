@@ -1,0 +1,40 @@
+<div class="div-header layui-row kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/bbs/[[$type]].html"><i class="fa fa-home"></i> [[$typeName]]</a>
+        <a><cite>管理员</cite></a>
+    </span>
+</div>
+
+<div style="height: 50px"></div>
+
+<div class="div-roster">
+    <p class="p-title">管理团队名单</p>
+
+    <p class="p-t"><i class="fa fa-user"></i> 管理员</p>
+    <p class="p-people"><a href="/user/card/[[$admin1_id]]">[[$admin1_nickname]] (ID [[$admin1_id]])</a></p>
+
+    <p class="p-t"><i class="fa fa-group" style="font-size: 13px"></i> 协管</p>
+    <div class="p-people">
+        [[volist name="admin2" id="data" empty="未任命"]]</p>
+        <a href="/user/card/[[$admin1_id]]">[[$data.nickname]] (ID [[$data.id]])</a><br/>
+        [[/volist]]
+    </div>
+
+    <p class="p-t"><i class="fa fa-user-o"></i> 创始人</p>
+    <p class="p-people"><a href="/user/card/[[$admin1_id]]">[[$founder_nickname]] (ID [[$founder_id]])</a></p>
+</div>
+
+<div class="div">
+    宣言
+</div>
+
+<div class="div-a-group layui-btn-container">
+    <a href="/bbs/[[$type]]/executive/page" class="layui-btn">页面设计</a>
+    <a href="/bbs/[[$type]]/executive/links" class="layui-btn">拓展链接</a>
+    <a class="layui-btn" href="/bbs/[[$type]]/executive/write">发帖设置</a>
+    <a class="layui-btn" href="/bbs/[[$type]]/executive/write">回复设置</a>
+    <hr/>
+    <a class="layui-btn" onclick="alert('无权限')">管理禅让</a><a class="layui-btn" onclick="alert('无权限')">协管任命</a><a class="layui-btn" onclick="alert('无权限')">黑色名单</a>
+    <hr/>
+    <a class="layui-btn" onclick="alert('无权限')">操作纪录</a>
+</div>

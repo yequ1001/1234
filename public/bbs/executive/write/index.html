@@ -1,0 +1,32 @@
+<div id="div_top" class="kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/bbs/[[$type]]"><i class="fa fa-home"></i> [[$typeName]]</a>
+        <a href="/bbs/[[$type]]/executive">管理员</a>
+        <a><cite>对话设置</cite></a>
+    </span>
+</div>
+
+<div style="height: 50px"></div>
+
+<div class="layui-form">
+    <input type="hidden" class="input-hidden-type" value="[[$type]]" />
+    <div>
+        允许发帖：<br/>
+        <input type="hidden" class="input-hidden-write" value="[[$authority_write]]" />
+        <input type="radio" name="write" value="0" title="不限制" />
+        <input type="radio" name="write" value="1" title="仅限我自己" />
+        <input type="radio" name="write" value="2" title="仅限管理员" />
+    </div>
+
+    <hr/>
+
+    <div>
+        允许回复：<br/>
+        <input type="hidden" class="input-hidden-reply" value="[[$authority_reply]]" />
+        <input type="radio" name="reply" value="0" title="不限制" />
+        <input type="radio" name="reply" value="1" title="仅限我自己" />
+        <input type="radio" name="reply" value="2" title="仅限管理员" />
+    </div>
+
+    <button class="layui-btn layui-btn-fluid layui-btn-normal" onclick="send()">更新</button>
+</div>

@@ -1,0 +1,247 @@
+#page_main {
+    background: linear-gradient(#F6F6F8, #FFFFFF);
+}
+
+/* 标题栏 */
+#title {
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(to right, #626774, #626774);
+    color: #FFFFFF;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px 0 6px;
+    font-size: 15px;
+}
+
+#title #onlineState {
+    flex: 2;
+}
+
+#title #pages {
+    flex: 1;
+    text-align: center;
+}
+
+#title .div-fun-select {
+    flex: 2;
+    text-align: right;
+}
+
+#title .div-fun-select input {
+    height: 26px;
+    display: inline-block;
+    width: 105px;
+    background: transparent;
+    border: 0;
+    color: #F2F2F2;
+}
+
+#title .div-fun-select input::-webkit-input-placeholder {
+    color: #F2F2F2;
+    font-size: 14px;
+    text-align: right;
+}
+
+#title .div-fun-select dd {
+    color: #666666;
+    text-align: center;
+}
+
+#title .div-fun-select dd:first-child {
+    display: none;
+}
+
+#title .onlineTag_0{
+    color: #c8c8c8;
+}
+#title .onlineTag_1{
+    color: #FFFFFF;
+}
+
+/* 在线闪烁特效 */
+.twinkle {
+    text-Shadow: 0 0 14px #FFFFFF;
+}
+
+/* 页面跳转 */
+.layui-laypage-skip {
+    display: block;
+    width: 100%;
+}
+
+#skip {
+    display:none;
+    position: fixed;
+    top: 37px;
+    background: rgba(255,255,255,0.95);
+    z-index: 100;
+    text-align: center;
+}
+
+/* 对话列表 */
+#list {
+    padding-top: 45px;
+    padding-bottom: 15px;
+}
+
+#list .time-line {
+    font-size: 14px;
+    text-align: center;
+    color: #a2a2a2;
+    margin-top: 10px;
+}
+
+.item-left, .item-right {
+    margin-top: 10px;
+    padding: 0 10px;
+    display: flex;
+}
+
+.item-left {
+    text-align: left;
+}
+
+.item-right {
+    text-align: right;
+}
+
+[class *= "item-"] .face {
+    flex: 2;
+    max-width: 50px;
+}
+
+[class *= "item-"] .content {
+    flex: 13;
+    font-size: 15px;
+}
+
+[class *= "item-"] .content p:first-child {
+    padding: 3px 6px 0 6px;
+}
+
+[class *= "item-"] .content .nickname{
+    font-size: 14px;
+    color: #6f7372;
+}
+
+[class *= "item-"] .face img{
+    width: 90%;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+/* 对话气泡 */
+.tag-left, .tag-right {
+    display:inline-block;
+    position:relative;
+    z-index:0;
+    min-width: 30px;
+    max-width: 85%;
+    margin-top: 3px;
+    margin-left:6px;
+    padding: 4px 10px 4px 8px;
+    border: #F5F5F5 1px solid;
+    border-radius: 4px;
+}
+
+.tag-left:before, .tag-left:after, .tag-right:before, .tag-right:after {
+    content:"";
+    border-width:5px;
+    position:absolute;
+    top:4px;
+    border-style:solid dashed dashed;
+}
+
+.tag-left a, .tag-right a {
+    color:#70D60A;
+}
+
+/* 左向气泡 */
+.tag-left {
+    background: linear-gradient(#FFFFFF,#FFFFFF, #F7FFFF);
+    color:#435240;
+}
+.tag-left:before {
+    left: -10px;
+    border-color: transparent #F3F3F3 transparent transparent;
+}
+.tag-left:after {
+    left:-9px;
+    border-color: transparent #FFF transparent transparent;
+}
+
+/* 右向气泡 */
+.tag-right {
+    background: linear-gradient(#FFFFFF,#FFFFFF, #FFFAF0);
+    color: #525043;
+    margin-right: 5px;
+    text-align: left;
+}
+.tag-right:before {
+    right: -10px;
+    border-color: transparent transparent transparent #F3F3F3;
+}
+.tag-right:after {
+    right: -9px;
+    border-color: transparent transparent transparent #FFF;
+}
+
+/* 弹出表单 */
+#div_form {
+    display: none;
+    padding: 12px;
+}
+
+#div_form .div-input {
+    border: #FFEAA5 1px solid;
+    padding: 3px;
+}
+
+#div_form .div-input textarea {
+    width: 100%;
+    height: 60px;
+    border: 0;
+    resize: none;
+    color: #3d4532;
+}
+
+#div_form .div-input .p-txtCount {
+    text-align: right;
+    color: #F2C63E;
+    font-size: 14px;
+}
+
+#div_form a {
+    font-size: 16px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+/* 向下快捷键 */
+#toBottom{
+    display: none;
+}
+
+/* 表单模态开关 */
+#i_form_btn {
+    position: fixed;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 52px;
+    bottom: 100px;
+    left: 50%;
+    border-radius: 25px;
+    z-index: 19;
+    background: rgba(50,50,50,0.1);
+    color: #FFFFFF;
+    font-size: 20px;
+    padding-left:3px;
+    text-align: center;
+    cursor: pointer;
+}

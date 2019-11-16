@@ -1,0 +1,73 @@
+[[extend name="template" /]]
+
+菜单栏：
+[[block name="page_menu"]]
+<a href="/"><i class="fa fa-home"></i>首页</a> <small>&gt;</small> <a href="/article/[[$type_en]]">养植手册</a> <small>&gt;</small> <span style="color: #898c8c">[[$type_cn]]</span>
+[[/block]]
+
+页面主体：
+[[block name="page_main"]]
+<h3 id="h_title" class="text-justify">[[$article->title]]</h3>
+
+<div id="div_info" class="text-right small text-muted row">
+    <div class="col-6 text-left">
+        <span class="badge badge-pill badge-warning">[[$source]]</span> 佚名
+    </div>
+    <div class="col-6 text-right"> 浏览[[$article->clickNum]]　回复[[$article->replyNum]]</div>
+</div>
+
+<article class="text-justify">
+    [[$article->content]]
+</article>
+
+[[if($article->source != "original")]]
+<div id="div_source" class="small">
+    本文来源 [[$article->source]]<br/>
+    
+</div>
+[[/if]]
+
+<div id="div_reply_title">
+    <i class="fa fa-coffee"></i> 最新评论 <small class="text-muted"></small>
+    <span class="small text-muted">更多[[$article->replyNum]] <i class="fa fa-angle-double-right"></i></span>
+</div>
+<div id="div_reply_content">
+    [[foreach $reply as $key=>$reply ]]
+    <div class="item">
+        <span class="nickname text-info">[[$reply.user]]</span><span class="reply text-muted">：[[$reply.content]]</span>
+    </div>
+    [[/foreach]]
+</div>
+<!-- 模态框 -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">新回复</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <textarea id="textarea_reply" placeholder="点我输入评论内容"></textarea><br/>
+                <div id="div_captcha" class="d-flex">
+                    <img id="img_captcha" src="[[:captcha_src()]]" onclick="this.src=this.src+'?'+Math.random()" />
+                    <input type="number" id="input_captcha" placeholder="点我输入左侧验证码" class="flex-grow-1" />
+                </div>
+                <button class="btn btn-primary" onclick="reply_send()"><i class="fa fa-paper-plane"></i> 发 送</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="div_reply_on" data-toggle="modal" data-target="#myModal">
+    点我评论
+    <div class="text-muted">
+        发 送
+    </div>
+</div>
+
+<!-- 随机文章推荐 -->
+[[$randRead]]
+
+[[/block]]

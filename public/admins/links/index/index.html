@@ -1,0 +1,35 @@
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+    <a href="/admins"><i class="fa fa-cubes"></i> 管理中心</a>
+    <a><cite>外链管理</cite></a>
+</div>
+
+<div id="div_list">
+    [[volist name="all" id="data"]]
+    <div class="div-item item-[[$data.id]] layui-form">
+        <p class="p-title">
+            <a class="a-link click" href="http://[[$data.url]]" target="_blank">[[$data.name]]【[[$data.recommend]]】</a>
+            <select>
+                <option value="">设置标徽</option>
+                <option value="null|[[$data.id]]">取消标徽</option>
+                <option value="人气|[[$data.id]]">人气</option>
+                <option value="精品|[[$data.id]]">精品</option>
+                <option value="推荐|[[$data.id]]">推荐</option>
+            </select>
+            <a class="a-update layui-btn layui-btn-normal" onclick="update([[$data.id]])">更新</a>
+            <a class="a-delete layui-btn layui-btn-warm" onclick="del([[$data.id]])">删除</a>
+        </p>
+        <p class="p-logo"><input class="input-logo" value="[[$data.logo]]" placeholder="LOGO地址" /></p>
+        <p class="p-main-url"><input class="input-url-main" type="search" value="[[$data.url_main]]" placeholder="首页完整地址，不是回链地址" /></p>
+        <p class="p-keywords"><input class="input-keywords" type="search" value="[[$data.keywords]]" placeholder="关键词" /></p>
+        <p class="p-description"><textarea autoHeight="true" class="textarea-description" placeholder="描述">[[$data.description]]</textarea></p>
+    </div>
+    [[/volist]]
+</div>
+
+[[$all|raw]]
+<div id="div_page_turning">
+    <input type="hidden" class="hidden-pages" value="" />
+    <input placeholder="输入页码" type="number" class="layui-input" /><a onclick="page_turning()" class="layui-btn layui-btn-primary"><i class="fa fa-paper-plane-o"></i> 翻页</a>
+</div>
+
+<br/>

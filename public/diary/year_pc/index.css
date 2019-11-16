@@ -1,0 +1,51 @@
+.layui-container {
+    padding: 0 5px;
+    margin: 0;
+    min-width: 3400px;
+}
+
+#div_nav {
+    position: fixed;
+    padding: 5px;
+}
+
+#div_nav a {
+    padding: 0 15px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.p-title {
+    text-align: center;
+    color: #34b674;
+    margin-top: 5px;
+}
+
+.div-line {
+    display: flex;
+}
+
+.span-day {
+    flex: 3;
+    text-align: right;
+    font-size: 13px;
+    color: #CECECE;
+    border-bottom: #FAFAFA 1px solid;
+}
+
+.span-content {
+    flex: 16;
+    font-size: 13px;
+    padding: 0 5px;
+    border-bottom: #FAFAFA 1px solid;
+}
+.span-content2 {
+    flex: 4;
+    font-size: 8px;
+    padding: 0 5px;
+    border-left: #FBFBFB 1px solid;
+    border-bottom: #FAFAFA 1px solid;
+    text-align: center;
+    color: #939393;
+}

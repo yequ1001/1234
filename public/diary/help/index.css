@@ -1,0 +1,92 @@
+#page_main {
+    background: #FFFFFF;
+}
+
+#div_logo {
+    background-image: url("/public/diary/help/bg_1.jpg");
+    background-size: 100% 200px;
+    background-repeat:no-repeat;
+    padding: 10px 0;
+}
+
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 12px;
+    color: #2770ec;
+    z-index: 100;
+}
+
+.layui-collapse {
+    border: 0;
+	font-size: 16px;
+}
+.layui-colla-title {
+    font-size: 16px;
+	background: #5FB878;
+	color: #FFFFFF;
+}
+.layui-colla-content a {
+    color: #0898F5;
+}
+
+.item1 h5 {
+    padding: 10px 5px;
+    margin: 10px 0;
+    background: #FFFCF0;
+    border-left: #FFF2D1 2px solid;
+    color: #F5B424;
+	font-size: 14px;
+}
+
+.item2 p {
+    color: #ff4320;
+    border: #f9f9f9 1px solid;
+    padding: 10px 5px;
+    border-left: #e8e8e8 2px solid;
+	font-size: 14px;
+}
+
+.item3 p {
+    padding: 7px 5px;
+    border: #f9f9f9 1px solid;
+    border-left: #e8e8e8 2px solid;
+    text-decoration: line-through;
+    color: #767676;
+	font-size: 14px;
+}
+
+.item4 div {
+    padding: 7px 5px;
+    border: #f9f9f9 1px solid;
+    border-left: #e8e8e8 2px solid;
+	font-size: 14px;
+}
+
+.item5 div {
+    border-left: #e8e8e8 2px solid;
+    padding: 5px 5px;
+    margin: 10px 0;
+    color: #5e625e;
+	font-size: 14px;
+}
+
+.item6 img {
+    max-width: 95%;
+    border: #e6f0e6 1px solid;
+    padding: 10px;
+}
+
+.item7 div {
+    border-left: #e8e8e8 2px solid;
+    padding: 5px 5px;
+    margin: 10px 0;
+    color: #5e625e;
+	font-size: 14px;
+}
+
+.layui-badge {
+    height: 16px;
+    line-height: 16px;
+}

@@ -1,0 +1,54 @@
+<div class="div-header layui-row kyy auto-width">
+    <div class="div-title layui-col-xs7">
+        [[$title]]
+    </div>
+    <div class="div-user layui-col-xs5">
+        <img src="[[$face]]" class="img-face" /> [[$nickname]]
+    </div>
+</div>
+
+<br/>
+
+<p class="p-keywords"></p>
+
+<div class="div-form">
+    <div class="div-title layui-row">
+        <div class="div-title-tips layui-col-xs2">标 题</div>
+        <div class="div-title-inp layui-col-xs10"><input class="input-title" value="[[$inputTitle]]" /></div>
+    </div>
+
+    <input class="input-keywords layui-input" type="hidden" readonly />
+    <input type="hidden" class="input-bind" value="[[$bind]]" />
+    <input type="file" id="input_file" style="display: none" />
+
+    <br/>
+
+    <div class="div-textarea">
+        <div class="div-content-p layui-row">
+            <div class="div-content-tips layui-col-xs2">内 容</div>
+            <div class="div-content-inp layui-col-xs10">&nbsp;</div>
+        </div>
+
+        <div class="div-content layui-textarea" contenteditable="true"></div>
+        <input type="hidden" class="input-type" value="[[$type]]" />
+
+        <div class="div-insert layui-row">
+            <div class="div-insert-img layui-col-xs8">
+                <button class="layui-btn click" onclick="face()"><i class="fa fa-smile-o"></i>表情</button>
+
+                <button class="button-file layui-btn click"><i class="fa fa-picture-o"></i>图片</button>
+            </div>
+            <div class="div-insert-send layui-col-xs4">
+                <button class="layui-btn layui-btn-normal" onclick="send()"><i class="fa fa-send-o"></i> 发 送</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="div-edit">
+    <a onclick="javascript:history.back(-1);" class="layui-btn layui-btn-sm layui-btn-fluid layui-btn-primary"><i class="fa fa-share"></i> 退出编辑</a>
+</div>
+
+<div id="div_faceList" style="display: none">
+    [[$faceList]]
+</div>

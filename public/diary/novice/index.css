@@ -1,0 +1,24 @@
+#page_main {
+    padding: 0 6%;
+    font-size: 16px;
+}
+
+#page_main a {
+    color: #1e9aff;
+}
+
+#page_main a:hover {
+    color: #187cce;
+}
+
+#div_header {
+}
+
+#p_img {
+}
+
+#p_img img {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+}

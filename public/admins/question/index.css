@@ -1,0 +1,36 @@
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 12px;
+    z-index: 100;
+}
+
+#div_form {
+    margin: 0 5%;
+    padding-top: 100px;
+}
+
+#div_form .p-question {
+    margin-bottom: 30px;
+}
+
+#div_form [class *= "p-answer"] {
+    display: flex;
+    margin-top: 10px;
+}
+
+
+#div_form [class *= "p-answer"] input:first-child {
+    flex: 1;
+}
+
+#div_form [class *= "p-answer"] input:last-child {
+    flex: 2;
+}
+
+#div_form a {
+    margin-top: 20px;
+    width: 70%;
+    margin-left: 15%;
+}

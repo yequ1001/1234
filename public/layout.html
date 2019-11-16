@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+	<meta content="always" name="referrer" />
+	<meta name="description" content="[[$description]]" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <!-- 网站LOGO -->
+    <link rel="shortcut icon" href="/public/static/logo_3.ico" type="image/x-icon" />
+    <!-- Font Awesome图标 -->
+    <link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css" />
+    <!-- jquery -->
+    <script src="//cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <!-- layui -->
+    <link rel="stylesheet" href="/public/static/layui/css/layui.css" />
+    <script src="/public/static/layui/layui.js"></script>
+    <!-- 全局默认静态文件 -->
+    [[:defaultStatic()]]
+    <!-- 当前页面静态文件 -->
+    [[:privateStatic()]]
+    <title>[[$title]]</title>
+</head>
+<body ontouchstart>
+<div id="div_message_count">[[php]]echo \app\common\facade\User::message()[[/php]]</div>
+<div class="layui-container">
+    <div id="page_main" class="layui-row">
+        {__CONTENT__}
+        &nbsp;
+    </div>
+</div>
+</body>
+</html>

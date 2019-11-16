@@ -1,0 +1,96 @@
+/* 菜单栏 */
+#page_menu {
+    background: linear-gradient(to right, #2ECB36, #0FB717);
+    color: #FFFFFF;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+}
+
+#page_menu a {
+    float: right;
+    color: #90EA93;
+}
+
+#ul_nav {
+    background: #FFFFFF;
+    padding-top: 40px;
+}
+    .nav-item {
+        background: rgba(255,255,255,0.6);
+        margin: 10px 5px;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+        border-bottom: 1px #48A52C solid;
+        color: #48A52C;
+    }
+    .nav-item:hover {
+        background: #D3F5C9;
+    }
+    .on {
+        border-bottom: 1px #8B8B8B solid;
+        color: #8B8B8B;
+    }
+
+
+/* 主内容区 */
+#page_main {
+}
+
+/* 文章列表 */
+#article-list {
+    background: #FFF;
+}
+
+/* 文章项目 */
+[id *= "article-item-"] {
+    padding: 10px 12px;
+    cursor: pointer;
+    border-bottom: 1px #F5F5F5 solid;
+}
+    .title {
+        color: #344050;
+        font-size: 18px;
+    }
+    .content {
+        font-size: 15px;
+    }
+    .img3 img {
+        height: 80px;
+        width: 33%;
+        max-width: 140px;
+        border-radius: 0px;
+    }
+    .content-img .content {
+        width: 100%;
+        padding-right: 4px;
+    }
+    .img1 img {
+        position: relative;
+        top: 4px;
+        height: 80px;
+        width: 100%;
+        max-width: 160px;
+        border-radius: 0px;
+    }
+    .info {
+        margin-top: 5px;
+    }
+
+[id *= "article-item-"]:hover {
+    background: #FAFAFA;
+}
+
+#div_exit {
+    background: #FFFFFF;
+}
+#div_exit a {
+    display: inline-block;
+    width: 90%;
+    margin: 5px 5%;
+    padding: 5px;
+    color: #758891;
+    background: #F2F5F5;
+    font-size: 15px;
+}

@@ -1,0 +1,27 @@
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+    <a href="/"><I class="fa fa-home"></i> 首页</a>
+    <a href="/diary/month">微日记</a>
+    <a><cite>找回日记</cite></a>
+</div>
+<br/>
+
+<div id="div_list">
+
+    <p>用户近期更新的日记已备份，如果您之前清除的日记已经遗忘，都可以在本页下载回看。</p>
+<br/>
+    <table class="layui-table">
+    <colgroup>
+    <col width="300">
+    <col width="10">
+    <col>
+    </colgroup>
+    <tbody>
+	[[volist name="fileArr" id="vo" empty="$empty"]]
+    <tr>
+      <td>[[$vo]]月的修改记录.txt</td>
+      <td><a href="/diary/backup/download/[[$vo]]" class="layui-btn layui-btn-normal">下载</a></td>
+    </tr>
+	[[/volist]]
+    </tbody>
+    </table>
+</div>

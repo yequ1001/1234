@@ -1,0 +1,47 @@
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 12px;
+    color: #2770ec;
+    z-index: 100;
+}
+
+#div_form {
+    margin: 0 5%;
+    padding-top: 80px;
+}
+
+#div_form .layui-form-item input {
+    border: 0;
+}
+
+.input-name-simple {
+    width: 65%;
+    float: left;
+    display: inline-block;
+}
+.div-select {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+#div_form {
+}
+
+#div_form p {
+    font-size: 12px;
+    color: #696975;
+    text-align: right;
+    position: relative;
+    top: -12px;
+}
+
+#div_form button {
+    font-size: 15px;
+    height: 35px;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 15px;
+}

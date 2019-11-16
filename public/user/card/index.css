@@ -1,0 +1,82 @@
+.g-head{
+    position: relative;
+    color: #FFFFFF;
+    font-size: 20px;
+    z-index: 10;
+    text-shadow: 0 0 2px #393934;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.g-head .screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 240px;
+    background: rgba(255,255,255,0.4);
+    z-index: 11;
+}
+
+.g-head .img-face{
+    top: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 160px;
+    filter: blur(30px);
+}
+
+.g-head .img-face2 {
+    width: 100px;
+    border: rgba(255,255,255,1) 2px solid;
+    border-radius: 100px;
+    position: relative;
+    z-index: 20;
+}
+
+.g-head .p-nickname {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    color: #404040;
+    text-shadow: 0 0 1px #FFFFFF;
+    font-size: 18px;
+    z-index: 20;
+    text-align: center;
+}
+
+.g-head .p-autograph {
+    position: absolute;
+    top: 205px;
+    left: 0;
+    color: #676767;
+    text-shadow: 0 0 1px #FFFFFF;
+    font-size: 14px;
+    z-index: 20;
+    text-align: center;
+    padding: 0 5%;
+}
+
+#ul_list {
+    padding: 0 20%;
+}
+
+#ul_list li {
+    padding: 10px 0;
+    color: #5a5a5a;
+    list-style: none;
+}
+
+#div_nav {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#div_nav a {
+    border-radius: 100px;
+    background: #d2d2d2;
+    height: 36px;
+    line-height: 36px;
+}
+

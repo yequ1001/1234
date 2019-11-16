@@ -1,0 +1,59 @@
+<script>
+    // 以下代码不要写到js外部文件中，移动端会失效
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/public/static/js/clipboard.min.js"></script>
+
+<header>
+    <h2>[[$title]]</h2>
+    <p>
+        <i class="fa fa-user"></i> [[$nickname]]　
+        <i class="fa fa-eye"></i> 浏览量[[$click]]
+        <span class="layui-badge">来自[[$belong]]</span>
+    </p>
+</header>
+
+<hr/>
+
+<article>
+    [[$content]]
+    <br/>
+    <br/>
+    [[if $user == app\common\facade\User::id()]]
+    <a href="/depot/developer/write?id=[[$id]]" class="layui-btn layui-btn-normal"><i class="fa fa-edit"></i> 修改</a>
+    <a onclick="del([[$id]])" class="layui-btn layui-btn-warm"><i class="fa fa-remove"></i> 删除</a>
+    [[/if]]
+    <p><small>*注：以上教程皆为笔者自己的经验总结和网络整理，不排除认知有误，欢迎任何人在下方留言指正，我会及时修正文章，谢谢。</small></p>
+</article>
+
+<hr style="height: 5px"/>
+
+<div id="div_pageTurning">
+<p>[[$last]]</p>
+    <hr/>
+<p>[[$next]]</p>
+</div>
+
+<hr style="height: 5px"/>
+
+<div class="layui-btn-group">
+    <a href="/depot/developer.html?type=[[$type]]&page=" class="layui-btn layui-btn-primary">返回上级</a>
+    <a href="/depot/message" class="layui-btn">给我留言</a>
+    <a href="/" class="layui-btn layui-btn-primary">网站首页</a>
+</div>
+
+<br/>
+<br/>
+
+<script>
+    var clipboard = new ClipboardJS('.a-copy');
+    clipboard.on('success', function(e) {
+        console.log(e);
+        layer.msg(msg_ok_icon +"复制成功", msg_ok);
+        clearSlct();
+    });
+    clipboard.on('error', function(e) {
+        layer.msg(msg_ng_icon + e, msg_ng);
+        console.log(e);
+    });
+</script>

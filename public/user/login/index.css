@@ -1,0 +1,54 @@
+#page_main {
+    background: #FFFFFF;
+    background-image: url("/public/user/login/bg_0.jpg");
+    background-size: 100% 250px;
+    background-repeat:no-repeat;
+}
+
+#div_form {
+    color: #272729;
+    margin: 0 12% 0 12%;
+    background: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+    #page_main {
+        background-size: 100% 500px;
+    }
+}
+
+.layui-tab {
+    margin: 0 10% 0 10%;
+    padding-top: 10%;
+}
+
+.layui-tab .layui-tab-title {
+    text-align: center;
+}
+
+#div_form #div_username, #div_form #div_password {
+    margin: 20px 0;
+    color: #3E4036;
+    font-size: 15px;
+}
+
+#div_form #div_password {
+    margin-top: 30px;
+}
+
+#div_form input {
+    color: #67676a;
+}
+
+#div_form .layui-input {
+    margin-top: 5px;
+    background: transparent;
+    border-radius: 0;
+}
+
+#div_form .layui-btn {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 15px;
+}
+

@@ -1,0 +1,47 @@
+<div id="div_header" class="kyy auto-width">
+    <div class="sel-group layui-form">
+        <div class="div_1">
+            <select id="sel_years" lay-search>
+                [[$selectYear]]
+            </select>
+        </div>
+        <div class="div_2">
+            <select id="sel_month">
+                [[$selectMonth]]
+            </select>
+        </div>
+        <button id="show_op" class="layui-btn layui-btn-sm layui-btn-normal" onclick="show_op()">功能 <i class="fa fa-angle-double-down"></i></button>
+    </div>
+    <div id="div_button" class="layui-btn-container">
+        <a class="layui-btn layui-btn-sm layui-bg-cyan" href="/">退出日记</a><br/>
+        <a class="layui-btn layui-btn-sm" onclick="privacy(this)">隐藏记事</a><br/>
+        <a class="layui-btn layui-btn-sm" href="/diary/search">日记搜索</a><br/>
+        <a class="layui-btn layui-btn-sm" href="/diary/history">历史今日</a><br/>
+        <a class="layui-btn layui-btn-sm" href="/diary/month/[[$a1]]" style="background: #5FB878">去年今月</a><br/>
+        <a class="layui-btn layui-btn-sm" href="/diary/month/[[$a2]]" style="background: #5FB878">去年下月</a><br/>
+        <a class="layui-btn layui-btn-sm layui-btn-warm" href="/diary/month/[[$a3]]">查看本月</a><br/>
+        <a class="layui-btn layui-btn-sm" href="/diary/[[$year]]?y=[[$year]]">年度记录</a><br/>
+        <a class="layui-btn layui-btn-sm" href="/diary/backup">找回日记</a><br/>
+        <a class="layui-btn layui-btn-sm layui-bg-cyan" onclick="logout()">退出登录</a><br/>
+        <a class="layui-btn layui-btn-sm layui-btn-primary" href="/diary/help">拓展用法</a><br/>
+    </div>
+</div>
+
+<div id="div_list">
+    <ul class='layui-timeline' data-date='[[$year]]-[[$month]]-01'>
+    [[foreach $list as $key => $value ]]
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+            <h4 class="layui-timeline-title [[$value.weekLight]]">[[$value.year]]-[[$value.month]]-[[$value.day]] 星期[[$value.week]] [[$value.todayLight]]</h4>
+            <div class='flex'>
+                <span id="btn_save1_[[$value.date]]" class="aa"><span onclick="save()">保存</span><span onclick="close2()">关闭</span></span>
+                <div class='p-[[$value.date]] div_content' contenteditable='true' onmousedown="inputOn('p-[[$value.date]]')" onblur="setColor('p-[[$value.date]]')">[[$value.content1]]</div>
+                <span id="btn_save2_[[$value.date]]" class="aa"><span onclick="save()">保存</span><span onclick="close2()">关闭</span></span>
+                <div class='f-[[$value.date]] div-content2' contenteditable='true' onmousedown="inputOn('f-[[$value.date]]')" onblur="format('f-[[$value.date]]')">[[$value.content2]]</div>
+            </div>
+        </div>
+    </li>
+    [[/foreach]]
+    </ul>
+</div>

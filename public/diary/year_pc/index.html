@@ -1,0 +1,81 @@
+<div id="div_nav" class="layui-col-xs12">
+    <a href="/diary/[[$year]]?confirm=no" class="layui-btn layui-btn-warm layui-btn-xs"><i class="fa fa-remove"></i> 退出电脑模式</a>
+    <a href="/diary/[[$year]]/download" class="layui-btn layui-btn-normal layui-btn-xs"><i class="fa fa-floppy-o"></i> 下载保存</a>
+    <a class="layui-btn layui-btn-sm" onclick="privacy(this)"><i class="fa fa-eye"></i> 隐藏记事</a>
+</div>
+
+<br/>
+<br/>
+
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年1月</p>
+    [[volist name="month1" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年2月</p>
+    [[volist name="month2" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年3月</p>
+    [[volist name="month3" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年4月</p>
+    [[volist name="month4" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年5月</p>
+    [[volist name="month5" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年6月</p>
+    [[volist name="month6" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年7月</p>
+    [[volist name="month7" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年8月</p>
+    [[volist name="month8" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年9月</p>
+    [[volist name="month9" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年10月</p>
+    [[volist name="month10" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年11月</p>
+    [[volist name="month11" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>
+<div class="layui-col-xs1">
+    <p class="p-title">[[$year]]年12月</p>
+    [[volist name="month12" id="vo" empty="$empty"]]
+    <div class="div-line"><span class="span-day">[[$i]]日</span> <span class="span-content">[[$vo.c1]]</span> <span class="span-content2">[[$vo.c2]]</span></div>
+    [[/volist]]
+</div>

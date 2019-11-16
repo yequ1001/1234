@@ -1,0 +1,37 @@
+<div id="div_top" class="kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/bbs/[[$type]].html"><i class="fa fa-home"></i> [[$typeName]]</a>
+        <a href="/bbs/read/[[$type]]/[[$articleId]].html">[[$articleTitle]]</a>
+        <a><cite>管理</cite></a>
+    </span>
+</div>
+
+<div class="div_form layui-form">
+    <div class="div-item">
+        <p class="p-title">【对该帖子的处理】</p>
+        <input type="hidden" class="input-hidden-fine" value="[[$is_fine]]" />
+        <input type="radio" name="s1" value="" title="默认" checked>
+        <input type="radio" name="s1" value="top" title="置顶">
+        <input type="radio" name="s1" value="essence" title="推荐">
+    </div>
+
+    <hr/>
+
+    <div class="div-item">
+        <p class="p-title">【对该作者的处理】</p>
+        <div class="div-contont">
+            以下输入框为空则不加黑或解除加黑
+        </div>
+        <input type="hidden" class="input-hidden-user" value="[[$user]]" />
+        <input type="hidden" class="input-hidden-nickname" value="[[$nickname]]" />
+        <input type="hidden" class="input-hidden-face" value="[[$face]]" />
+        <input readonly class="layui-input" id="test1" value="[[$default_value]]" placeholder="点我将作者移入黑名单，选择解禁时间" />
+        <small style="color: #b7b7c1">（有效期最长为1年）</small>
+    </div>
+
+</div>
+
+<div class="layui-btn-container">
+    <button class="layui-btn layui-btn-fluid layui-btn-normal" onclick="send()"><i class="fa fa-wrench"></i> 执行操作</button>
+    <button onclick="javascript:history.back(-1);" class="layui-btn layui-btn-fluid layui-btn-primary"><i class="fa fa-close"></i> 取消返回</button>
+</div>

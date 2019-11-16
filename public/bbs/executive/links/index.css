@@ -1,0 +1,41 @@
+.div-header {
+    position: fixed;
+    z-index: 100;
+    padding: 0 12px;
+    height: 40px;
+    line-height: 40px;
+    background: linear-gradient(#f9f9f9, #ffffff);
+}
+
+.p-explain {
+    padding: 0 12px;
+    color: #FF5821;
+}
+
+.div-form {
+    padding: 12px;
+}
+
+.div-item {
+    border-bottom: 1px #f9f9f9 solid;
+    padding: 5px 0;
+}
+
+.div-form input {
+    width: 100%;
+    height: 25px;
+    padding: 0 3px;
+}
+
+.div-form .name {
+    color: #626262;
+    line-height: 32px;
+}
+
+.div-form .input {
+    line-height: 32px;
+}
+
+.input-url {
+    color: #4895ED;
+}

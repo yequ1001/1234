@@ -1,0 +1,10 @@
+#div_top {
+    padding: 10px 10px;
+    position: fixed;
+    background: rgba(255,255,255,0.95);
+    z-index: 100;
+}
+
+.layui-form {
+    padding: 12px;
+}

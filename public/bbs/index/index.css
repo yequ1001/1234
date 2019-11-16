@@ -1,0 +1,114 @@
+.form-header {
+    background: #34CB81;
+	/*background: url("logo_3.jpg") no-repeat;*/
+    overflow: hidden;
+    background-size:100%;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.div-yuan1, .div-yuan2 {
+	position: absolute;
+	display: inline-block;
+	border-radius: 100px;
+}
+
+.div-yuan1 {
+	background: rgba(255,255,255,0.2);
+	top: 20px;
+	left: 10%;
+	width: 80px;
+	height: 80px;
+}
+.div-yuan2 {
+	background: rgba(255,255,255,0.4);
+	top: 50px;
+	left: 70%;
+	width: 120px;
+	height: 120px;
+}
+
+.form-header .div-input {
+    border: 0;
+    display: flex;
+    background: rgba(255,255,255,0.3);
+    margin: 0 5%;
+    border-radius: 3px;
+}
+
+.form-header .div-input input {
+    flex: 9;
+    background: transparent;
+    height: 40px;
+    border: 0;
+    padding: 0 10px;
+	font-size: 14px;
+	color: rgba(255,255,255,0.8);
+}
+
+.form-header .div-input button {
+    flex: 2;
+    background: transparent;
+    height: 40px;
+    color: rgba(255,255,255,0.8);
+    padding: 0;
+}
+
+[class *= "fa-flag-"] {
+    font-style: italic;
+}
+
+/*官方论坛*/
+.div-official .div-title, .div-rand .div-title {
+    padding: 8px 15px;
+    color: #009688;
+	background: #F5FAF7;
+}
+
+.div-official .div-official {
+
+}
+
+.div-official .div-official-item {
+    padding: 10px 8px;
+}
+
+.div-official .div-official-item a {
+    display: inline-block;
+    padding: 0 10px;
+    background: #fafafa;
+    margin: 3px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    color: #526A7C;
+}
+
+.div-official .div-official-item a:hover {
+	color: #FFA524;
+}
+
+/*随机推荐列表*/
+.div-rand {
+}
+
+.div-rand .div-rand-item {
+    padding: 10px 8px;
+}
+
+.div-rand .div-rand-item a {
+    display: inline-block;
+    padding: 0 10px;
+    background: #fafafa;
+    margin: 3px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    color: #526A7C;
+}
+
+.div-rand .div-rand-item a:hover {
+    color: #FFA524;
+}

@@ -1,0 +1,51 @@
+#page_main {
+    background-image: url("/public/user/bg_0.jpg");
+    background-size: 100% 350px;
+    background-repeat:no-repeat;
+}
+
+#div_nav {
+    padding: 10px 20px;
+    position: fixed;
+    background: rgba(255,255,255,0);
+    z-index: 100;
+}
+
+#div_select {
+    padding: 50px 5% 10px 5%;
+}
+
+#div_select input {
+    background: rgba(255,255,255,0.6);
+}
+
+#div_select input::-webkit-input-placeholder {
+    color: #7C7C7C;
+}
+
+#div_form {
+    padding: 20px 5% 5px 5%;
+}
+
+#div_form .layui-form-item {
+    margin-top: 30px;
+}
+
+label {
+    color: #586A76;
+}
+
+#div_form .layui-form-item input {
+    border: 0;
+    background: rgba(255,255,255,0.2);
+}
+
+#div_form button {
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 15px;
+    background: #7C8B95;
+}

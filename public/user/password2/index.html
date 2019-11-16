@@ -1,0 +1,39 @@
+<div id="div_nav" class="kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/"><i class="fa fa-home"></i> 首页</a>
+        <a href="/user">用户中心</a>
+        <a><cite>安全密码</cite></a>
+    </span>
+</div>
+
+<div id="div_select" class="layui-form">
+    <select name="info">
+        <option value="">更多信息设置</option>
+        <option value="/user/face">头像设置</option>
+        <option value="/user/autograph">我的签名</option>
+        <option value="/user/rename">更改名字</option>
+        <option value="/user/password">登录密码</option>
+        <option value="/user/password2" disabled>安全密码 ←</option>
+    </select>
+</div>
+
+<div id="div_form" class="layui-form layui-form-pane">
+    <p style="color: #5A6264">· 如果想要删除安全码，将新安全码留空保存即可。</p>
+    <p style="color: #5A6264">· 安全码仅限字母和数字，长度0~6字符。</p>
+
+    <div class="layui-form-item" pane>
+        <label class=" layui-form-label">登录密码</label>
+        <div class="layui-input-block">
+            <input class="layui-input password" type="password" />
+        </div>
+    </div>
+
+    <div class="layui-form-item" pane>
+        <label class="layui-form-label">安全码</label>
+        <div class="layui-input-block">
+            <input class="layui-input password2" />
+        </div>
+    </div>
+
+    <button onclick="update()" class="layui-btn layui-btn-normal">确认更改</button>
+</div>

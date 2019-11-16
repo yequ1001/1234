@@ -1,0 +1,44 @@
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<div class="layui-tab layui-tab-brief">
+    <ul class="layui-tab-title">
+        <li><a href="/">首页</a></li>
+        <li><a href="/user/login">登录</a></li>
+        <li class="layui-this">注册</li>
+    </ul>
+</div>
+
+<p id="p_help" class="auto-width kyy"></p>
+
+<div id="div_form">
+    <div id="div_username">
+        <div class="tit">用户名：</div>
+        <div class="inp"><input id="username" autocomplete="off" onFocus="help('username')" /></div>
+    </div>
+
+    <div id="div_nickname">
+        <div class="tit">昵称：</div>
+        <div class="inp"><input id="nickname" autocomplete="off" onFocus="help('nickname')" /></div>
+    </div>
+
+    <div id="div_password1" style="display: none">
+        <div class="tit">密码1：</div>
+        <div class="inp"><input id="password" autocomplete="off" type="password" onFocus="help('password')" /></div>
+    </div>
+
+    <div id="div_password2" style="display: none">
+        <div class="tit">密码2：</div>
+        <div class="inp"><input id="password_confirm" autocomplete="off" type="password" onFocus="help('password_confirm')" /></div>
+    </div>
+
+    <div id="div_mobi">
+        <div class="tit">手机号：</div>
+        <div class="inp"><input id="mobi" type="number" autocomplete="off" onFocus="help('mobi')" /><span class="span-sms-btn click layui-btn layui-btn-primary" id="TencentCaptcha" data-appid="2003609756" data-cbfn="callback">发送短信验证码</span></div>
+    </div>
+
+    <div id="div_captcha">
+        <div class="tit">验证码：</div>
+        <div class="inp"><input id="captcha" type="number" autocomplete="off" onFocus="help('captcha')" /></div>
+    </div>
+
+    <a class="a-btn layui-btn layui-btn-normal layui-btn-sm" onclick="postData()">注　册</a>
+</div>

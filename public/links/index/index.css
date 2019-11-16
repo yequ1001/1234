@@ -1,0 +1,161 @@
+#page_main {
+    background-image: url("/public/links/index/bg_4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 200px;
+}
+
+#div_header {
+    height: 150px;
+}
+
+#div_header .title {
+    font-size: 25px;
+    color: #5F626A;
+    font-weight: bold;
+    position: absolute;
+    top: 65px;
+    left: 10px;
+}
+
+/* 推荐列表 */
+.div-ReplyTime .div-link {
+    padding: 6px 0;
+}
+.div-ReplyTime .div-link:hover {
+    background: #FAFFFF;
+}
+.div-ReplyTime hr {
+    background: #F5FAFF;
+}
+.div-ReplyTime .p-link-name {
+    margin: 0 10px 0 10px;
+}
+.div-ReplyTime .p-link-name span {
+    display: inline-block;
+}
+.div-ReplyTime .p-link-name a {
+    color: #366FE5;
+    font-size: 16px;
+}
+.div-ReplyTime .p-link-name a:hover {
+    color: #ff821c;
+}
+.div-ReplyTime .p-link-name .collect {
+    display: inline-block;
+    float: right;
+    margin-top: 3px;
+    color: #868990;
+    font-size: 12px;
+}
+.div-ReplyTime .p-link-description {
+    margin: 5px 10px;
+    font-size: 14px;
+    color: #6A7181;
+}
+
+/* 详细分类 */
+[class *= "div-type-"] .div-a-group {
+    padding: 4px;
+}
+[class *= "div-type-"] a {
+    display: inline-block;
+    background: #F7FCFF;
+    color: #295FD1;
+    padding: 5px 15px;
+    font-size: 15px;
+    margin: 2px 1px;
+    border-radius: 1px;
+}
+[class *= "div-type-"] a:hover {
+    background: #E8F7FF;
+}
+[class *= "div-type-"] a img {
+    position: relative;
+    top: -1px;
+    width: 19px;
+    border-radius: 99px;
+}
+[class *= "div-type-"] h1 {
+    color: #3E4D6C;
+    font-size: 20px;
+    padding: 0 10px 6px 10px;
+    border-bottom: #A0BFFF 1px solid;
+}
+[class *= "div-type-"] h1 span {
+    display: inline-block;
+    width: 5px;
+    height: 10px;
+    background: #5A90FF;
+    margin-right: 5px;
+}
+[class *= "div-type-"] hr {
+    margin: 6px;
+}
+
+/* 增加收藏表单 */
+.div-form, .div-updateForm {
+    padding: 15px;
+}
+
+.div-form p, .div-updateForm p {
+    margin-top: 8px;
+}
+
+.div-form p:last-child, .div-updateForm p:last-child {
+    text-align: center;
+}
+
+.div-form p:last-child a, .div-updateForm p:last-child a {
+    margin-top: 5px;
+    width: 30%;
+    border-radius: 100px;
+    min-width: 140px;
+}
+
+.div-updateForm p:last-child a {
+    min-width: 70px;
+    max-width: 70px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+}
+
+/* 修改收藏表单 */
+
+hr {
+    margin-top: 15px;
+    height: 5px;
+}
+
+.layui-tab-content {
+    padding: 0;
+}
+
+.div-item {
+    padding: 12px 10px;
+    border-bottom: #FbFbFb 5px solid;
+}
+
+.div-item:hover {
+    background: #fcfcfc;
+}
+
+
+
+/* 页底 */
+#div_footer {
+    color: #D3D3D3;
+    line-height: 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+#div_footer a{
+    color: #A3A3A3;
+}
+
+#div_footer p:first-child {
+    font-size: 12px;
+}

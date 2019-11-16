@@ -1,0 +1,59 @@
+#page_main {
+    background-image: url("/public/user/bg_0.jpg");
+    background-size: 100% 350px;
+    background-repeat:no-repeat;
+}
+
+#div_nav {
+    padding: 10px 20px;
+    position: fixed;
+    background: rgba(255,255,255,0);
+    z-index: 100;
+}
+
+#div_select {
+    padding: 50px 5% 10px 5%;
+}
+
+#div_select input {
+    background: rgba(255,255,255,0.6);
+}
+
+#div_select input::-webkit-input-placeholder {
+    color: #7C7C7C;
+}
+
+#div_border {
+    margin: 8% 5% 0 1%;
+    padding: 15px;
+    background: rgba(241,245,246,0);
+    color: #6A7C8B;
+}
+
+#div_border .div-prompt {
+    line-height: 25px;
+    text-align: center;
+}
+
+#div_border .div-form {
+    margin-top: 10%;
+}
+
+#div_border .div-form input {
+    border: #F2F5F7 1px solid;
+    background: transparent;
+    width: 100%;
+    color: #4D5F6C;
+    text-align: center;
+    padding: 5px;
+}
+
+#div_border .div-form a {
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 20px 15% 0 15%;
+    background: #7C8B95;
+    border-radius: 4px;
+    padding: 5px 0;
+}

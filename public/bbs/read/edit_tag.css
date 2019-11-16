@@ -1,0 +1,43 @@
+[class*="u-edit2-"], [class*="u-edit1-"]{
+    display: none;
+}
+
+[class*="u-edit1-"] .u-edit1{
+    position: absolute;
+    width: 50px;
+    right: 110px;
+    display: inline-block;
+    background: #75787f;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+[class*="u-edit1-"] .u-edit1:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border: transparent 4px solid;
+    border-left: #75787f 4px solid;
+    position: absolute;
+    right: -8px;
+    top: 5px;
+}
+
+[class*="u-edit2-"] .u-edit2{
+    position: absolute;
+    width: 50px;
+    right: 60px;
+    display: inline-block;
+    background: #75787f;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+[class*="u-edit2-"] .u-edit2:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border: transparent 4px solid;
+    border-left: #75787f 4px solid;
+    position: absolute;
+    right: -8px;
+    top: 5px;
+}

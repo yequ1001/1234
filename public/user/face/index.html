@@ -1,0 +1,47 @@
+<script src="/public/user/face/jquery.min.js"></script>
+<script src="/public/user/face/iscroll-zoom.js"></script>
+<script src="/public/user/face/hammer.js"></script>
+<script src="/public/user/face/lrz.all.bundle.js"></script>
+<script src="/public/user/face/jquery.photoClip.js"></script>
+<div id="div_nav" class="kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/"><i class="fa fa-home"></i> 首页</a>
+        <a href="/user">用户中心</a>
+        <a><cite>头像设置</cite></a>
+    </span>
+</div>
+
+<div id="div_select" class="layui-form">
+    <select name="info">
+        <option value="">更多信息设置</option>
+        <option value="/user/face" disabled>头像设置 ←</option>
+        <option value="/user/autograph">我的签名</option>
+        <option value="/user/rename">重新取名</option>
+        <option value="/user/password">登录密码</option>
+        <option value="/user/password2">安全密码</option>
+    </select>
+</div>
+
+<p id="p_operation">
+    <span onclick="openOperation()"><i class="fa fa-exclamation-circle"></i> 点击查看操作提示</span>
+</p>
+
+<div id="div_operation">
+    <p>移动设备：双指捏合为缩放，双指旋转每次可旋转90度。</p>
+    <p>电脑设备：鼠标滚轮为缩放，每次双击则顺时针旋转90度。</p>
+</div>
+
+<div id="clipArea">
+</div>
+
+<input type="file" id="file" accept="image/*" />
+
+<div id="div_function">
+    <a class="a-select layui-btn layui-btn-normal">1.选择图片</a>
+    <span class="fa fa-angle-double-right"></span>
+    <a id="clipBtn" class="layui-btn layui-btn-normal">2.裁剪上传</a>
+</div>
+
+<div id="view">
+    这是裁剪预览图
+</div>

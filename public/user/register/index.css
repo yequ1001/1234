@@ -1,0 +1,83 @@
+#page_main {
+    background: #FFFFFF;
+    background-image: url("/public/user/register/bg_0.jpg");
+    background-size: 100% 250px;
+    background-repeat:no-repeat;
+}
+
+#p_help {
+	display: none;
+	background: rgba(95,184,120,0.9);
+	color: #fff;
+	text-align: center;
+	padding: 15px 5%;
+	position: fixed;
+	font-size: 15px;
+	top: 0;
+}
+
+#div_form {
+    margin: 0 11% 0 11%;
+}
+
+@media only screen and (min-width: 768px) {
+    #page_main {
+        background-size: 100% 500px;
+    }
+}
+
+.layui-tab {
+    margin: 0 10% 0 10%;
+    padding-top: 10%;
+}
+
+.layui-tab .layui-tab-title {
+    text-align: center;
+}
+
+#div_username, #div_nickname, #div_password1, #div_password2, #div_captcha, #div_mobi {
+    display: flex;
+    border-bottom: #f2f2f2 1px solid;
+    height: 35px;
+    line-height: 35px;
+    margin: 35px 0;
+}
+
+#div_username {
+    margin-top: 50px;
+}
+
+#div_mobi .inp span {
+    float: right;
+}
+
+#div_captcha {
+    margin-top: 0;
+}
+
+.tit {
+    flex: 5;
+    max-width: 90px;
+    color: #3E4036;
+    text-align: center;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+.inp {
+    flex: 10;
+    padding-left: 5px;
+}
+
+input {
+    border: 0;
+    color: #4f5050;
+    width: 100%;
+    font-size: 15px;
+    background: transparent;
+}
+
+.a-btn {
+    width: 100%;
+    font-size: 15px;
+}

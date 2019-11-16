@@ -1,0 +1,111 @@
+#page_main {
+    background: #FDFDFD;
+}
+
+#div_nav {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 12px;
+    color: #2770ec;
+    z-index: 100;
+}
+
+#div_form {
+    padding: 55px 5% 10px 5%;
+}
+
+#div_form .div_input {
+    font-size: 14px;
+}
+
+    .div-select {
+        display: inline-block;
+        float: left;
+        width: 28%;
+    }
+
+    #div_form .div_input input:first-child {
+        border: #D2D2D2 1px solid;
+        height: 33px;
+        text-align: center;
+        border-right: 0;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        color: #5D5D5D;
+    }
+
+    #div_form .div_input .input_key {
+        text-align: center;
+        height: 33px;
+        color: #413c3c;
+        float: left;
+        width: 50%;
+        border-left: 0;
+        border-right: 0;
+        border-top: #D2D2D2 1px solid;
+        border-bottom: #D2D2D2 1px solid;
+    }
+
+    #div_form .div_input button {
+        height: 33px;
+        font-size: 14px;
+        color: #FFFFFF;
+        background: #1E9FFF;
+        border: 0;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        float: left;
+        width: 22%;
+    }
+
+#div_list {
+    padding-top: 30px;
+}
+
+#div_list .load {
+    padding: 7%;
+    text-align: center;
+    color: #8695A5;
+}
+
+#div_list .msg {
+    padding: 60% 5% 0 5%;
+    color: #dbdbdb;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+
+#div_list .item {
+    margin: 10px 5%;
+	border: #FFFCF7 1px solid;
+    padding: 10px;
+    cursor: pointer;
+    background: #FFFFFF;
+}
+
+#div_list .item:hover {
+	background: #FCFFFF;
+    border-left: #5dbaff 1px solid;
+    color: #202132;
+}
+
+#div_list .item h1 {
+    font-size: 12px;
+    padding: 5px 0;
+    color: #7a7a7a;
+}
+
+#div_list .content {
+}
+
+#div_list .content hr {
+    width: 80%;
+    background: #eeebf5;
+    height: 1px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    bottom: 5px;
+}

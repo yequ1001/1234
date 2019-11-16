@@ -1,0 +1,58 @@
+[[if input("iframe") != "true"]]
+<div class="g-head auto-width">
+    <!-- 背景白色半透遮蔽层 -->
+    <div class="screen auto-width"></div>
+    <!-- 背景图片 -->
+    <img class="img-background auto-width" src="[[$face]]" />
+    <!-- 白色半透带 -->
+    <div class="div-girdle auto-width"></div>
+    <!-- 主页 -->
+    <div class="div-info auto-width">
+        <div class="div-d1">
+            <img class="img-face" src="[[$face]]" />
+        </div>
+        <div class="div-d2">
+            <p class="p-nickname">[[$nickname]]</p>
+            <p class="p-autograph">[[$autograph]]</p>
+        </div>
+    </div>
+</div>
+
+[[if !input("referer")]]
+<div id="div_nav" class="auto-width layui-form">
+    <a href="/">首页</a><a href="">好友</a><a href="/user/search">找人</a>
+    <select>
+        <option value="">我的资料</option>
+        <option value="/user/info">详细信息</option>
+        <option value="/user/autograph">个性签名</option>
+        <option value="/user/face">头像设置</option>
+        <option value="/user/rename">更改名字</option>
+        <option value="/user/password">登录密码</option>
+        <option value="/user/password2">安全密码</option>
+        <option value="logout">退出登录</option>
+    </select>
+</div>
+[[else /]]
+<div id="div_nav" class="auto-width layui-form">
+    <a href="/"><i class="fa fa-home"></i> 网站首页</a><a href="[[:input('referer')]]"><i class="fa fa-mail-forward"></i> 返回来源页面</a>
+</div>
+[[/if]]
+[[/if]]
+
+<div id="div_message">
+    [[volist name="messageList" id="vo" empty="$empty"]]
+    <div class="div-item" onclick="linkMessage([[$vo.to]])">
+        <div class='div-img'>
+            <img src='[[$vo.toFace]]' />
+        </div>
+        <div class='div-content'>
+            <div class='div-line1'>
+                <span>[[$vo.toNickname]]</span><span>[[$vo.onlineTag]]</span>
+            </div>
+            <div class='div-line2'>
+                <span>[[$vo.content]]</span><span>[[$vo.time]]</span>
+            </div>
+        </div>
+    </div>
+    [[/volist]]
+</div>

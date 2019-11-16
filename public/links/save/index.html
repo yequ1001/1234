@@ -1,0 +1,69 @@
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+    <a href="/"><I class="fa fa-home"></i> 首页</a>
+    <a>站务</a>
+    <a href="/depot/cooperation">合作</a>
+    <a><cite>申请链接</cite></a>
+</div>
+
+<div id="div_form" class="layui-form layui-form-pane">
+    <div class="layui-form-item" pane>
+        <label class="layui-form-label">网站全称</label>
+        <div class="layui-input-block">
+            <input class="input-name layui-input" autocomplete="off"/>
+        </div>
+    </div>
+    <p>限2~10字</p>
+
+    <div class="layui-form-item" pane>
+        <label class="layui-form-label">网站类型</label>
+        <div class="layui-input-block">
+            <div class="div-select">
+                <select>
+                    <option value="">点击选择</option>
+                    <optgroup label="内容型网站">
+                        <option value="博客">博客</option>
+                        <option value="论坛">论坛</option>
+                        <option value="文章">文章</option>
+                        <option value="其他">其他</option>
+                    </optgroup>
+                    <optgroup label="功能型网站">
+                        <option value="导航">导航</option>
+                        <option value="其他">其他</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <p>限2~3字</p>
+
+    <div class="layui-form-item" pane>
+        <label class="layui-form-label">链接地址</label>
+        <div class="layui-input-block">
+            <input class="input-url layui-input" autocomplete="off"/>
+        </div>
+    </div>
+    <p>有无http开头均可</p>
+
+    <div class="layui-form-item" pane>
+        <label class="layui-form-label">联系手机</label>
+        <div class="layui-input-block">
+            <input class="input-mobi layui-input" type="number" autocomplete="off"/>
+        </div>
+    </div>
+    <p>填写手机号，可留空</p>
+
+    <div class="layui-form-item" pane>
+        <label class="layui-form-label">验证码</label>
+        <div class="layui-input-block">
+            <input id="captcha" class="input-captcha layui-input" type="number" autocomplete="off"/>
+        </div>
+    </div>
+    <p><img id="img_captcha" src="[[:captcha_src()]]" onclick="this.src=this.src+'?'+Math.random()" style="height: 22px" /></p>
+
+    <button onclick="send()" class="layui-btn layui-btn-normal"><i class="fa fa-paper-plane-o"></i> 提　交</button>
+</div>
+
+<br/>
+<br/>

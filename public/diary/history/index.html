@@ -1,0 +1,45 @@
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+  <a href="/"><I class="fa fa-home"></i> 首页</a>
+  <a href="/diary/month">微日记</a>
+  <a><cite>历史今日 <small>[[$date]]</small></cite></a>
+</div>
+&nbsp;
+<div class="layui-tab">
+    <ul class="layui-tab-title">
+        <li class="layui-this"><i class="fa fa-user-circle-o"></i> 关于我</li>
+        <li><i class="fa fa-globe"></i> 关于世界</li>
+    </ul>
+    <div class="layui-tab-content layui-tab-content2">
+        <!-- 关于我 -->
+        <div id="div_myHistory" class="layui-tab-item layui-show">
+            [[volist name="my_history" id="data" empty="$empty"]]
+            <div class="item" onclick="">
+                <div class="title">
+                    <p>[[$data.year]]年</p>
+                </div>
+                <div class="content">
+                    <p>[[$data.content1]]</p><p>[[$data.content2]]</p>
+                </div>
+            </div>
+            [[/volist]]
+        </div>
+
+        <!-- 关于世界 -->
+        <div id="div_worldHistory" class="layui-tab-item">
+            [[volist name="world_history" id="data"]]
+            <div class="item item-[[$data.id]]">
+                <div class="title title-[[$data.id]]" onclick="openHistory('[[$data.id]]')">
+                    <p>[[$data.date]]年</p><p>[[$data.title]]</p>
+                </div>
+                <div class="content id-[[$data.id]]">
+                    [[$data.content]]
+                    <br/>
+                    <p class="p-end">End.</p>
+                </div>
+            </div>
+            [[/volist]]
+        </div>
+    </div>
+</div>
+
+<br/>

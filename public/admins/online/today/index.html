@@ -1,0 +1,15 @@
+<div id="div_nav" class="layui-breadcrumb auto-width kyy">
+    <a href="/admins"><i class="fa fa-cubes"></i> 管理中心</a>
+    <a><cite>今日访客统计</cite></a>
+</div>
+
+<div id="div_list">
+    [[volist name='UserOnlineData' id='data']]
+    <div class="div-item-[[$data.id]]">
+        <p><span class="span-time">[[$data.time_start]]</span> [[$data.user]] <span class="layui-badge layui-bg-gray click" onclick="ua([[$data.id]])">[[$data.system]]</span> [[$data.time_end]]</p>
+        <p><small>[[$data.url]] <a class="a-ip" onclick="ip([[$data.id]] ,'[[$data.ip]]')" style="color: #4676B2">[[$data.ip]]</a></small></p>
+        <input type="hidden" value="[[$data.ua]]" />
+    </div>
+    [[/volist]]
+</div>
+[[$UserOnlineData|raw]]

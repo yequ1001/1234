@@ -1,0 +1,24 @@
+#div_top {
+    padding: 10px 10px;
+    position: fixed;
+    background: rgba(255,255,255,0.95);
+    z-index: 100;
+}
+
+.layui-tab {
+    padding: 12px;
+    padding-top: 0;
+}
+
+.p-explain {
+    margin: 10px 0 20px 0;
+}
+
+.layui-btn-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.layui-btn-container button {
+    width: 45%;
+}

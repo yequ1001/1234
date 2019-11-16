@@ -1,0 +1,150 @@
+<div id="div_top" class="kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/bbs/[[$type]].html"><i class="fa fa-home"></i> [[$typeName]]</a>
+        <a><cite>[[$title_short]]</cite></a>
+    </span>
+    [[if $serializeCount > 1]]
+    <a class="btn" style="font-size: 14px; float: right; color: #767c91"><i class="fa fa-navicon"></i> 查看目录</a>
+    [[/if]]
+</div>
+
+<!--侧边栏-->
+<div id="menu">
+    <div class="f1">
+        <ul>
+            <li class="li-catalog">目录</li>
+            [[volist name="serializeData" id="data"]]
+            [[if $data.id == $id]]
+            <li class="menu-dark-backdrop sidebar-current click">第[[$i]]更 [[$data.title]] <small><i class="fa fa-commenting-o"></i> [[$data.reply]]</small></li>
+            [[else/]]
+            <li><a href="/bbs/read/[[$type]]/[[$data.id]].html">第[[$i]]更 [[$data.title]] <small><i class="fa fa-commenting-o"></i> [[$data.reply]]</small></a></li>
+            [[/if]]
+            [[/volist]]
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function ($) {
+        $('#menu').leftMenu({
+            "triggerBtn":".btn"
+        }).init()
+    })
+</script>
+
+<!--标题-->
+<div id="div_title">
+    [[$title]]
+</div>
+
+<!--楼主名片-->
+<div id="div_user_card" class="layui-row">
+    <div class="div-face layui-col-xs2 layui-col-sm1">
+        <img class="img-author-face" src="[[$face]]" />
+    </div>
+    <div class="div-card layui-col-xs10 layui-col-sm11">
+        <div class="div-nickname">[[$nickname]]<a class="a-card" href="/user/card/[[$user]]"><i class="fa fa-address-card-o"></i></a></div>
+        <div class="div-autograph">[[$autograph]]</div>
+    </div>
+</div>
+
+<!--帖子信息-->
+<div id="div_info" class="layui-row">
+    <div class="col-1 layui-col-xs1"><i class="fa fa-clock-o"></i><br/><i class="fa fa-eye"></i><br/><i class="fa fa-commenting"></i></div>
+	<div class="col-2 layui-col-xs11">时间：[[$time]][[$biao]]<br/>浏览：[[$click]]<br/>评论：[[$reply]]</div>
+</div>
+
+<!--正文内容-->
+<div id="div_content" class="div-landlord roll" data-roll="div-landlord">
+    <!--[[if $serializeCount > 1]]-->
+    <!--<p class="p-catalog"><a class="a-catalog layui-badge layui-bg-gray btn">打开连载目录</a></p>-->
+    <!--[[/if]]-->
+    <div  class="div-roll">
+        [[$content]]
+    </div>
+</div>
+<p class="p-roll-div-landlord"></p>
+
+<!--帖子操作按钮-->
+[[if app\common\facade\User::id() == $user]]
+<div id="div_operation">
+    <a onclick="del([[$id]], [[$type]])"><i class="fa fa-times"></i> 删除</a>
+    <a href="/bbs/update/[[$id]]"><i class="fa fa-repeat"></i> 修改</a>
+    <a href="/bbs/[[$type]]/write/[[$bind]]?type=append"><i class="fa fa-edit"></i> 连载</a>
+    <a href="/bbs/read/[[$type]]/[[$id]]/operate"><i class="fa fa-balance-scale"></i> 管理</a>
+</div>
+[[/if]]
+
+<hr style="height: 1px"/>
+
+<!--评论列表-->
+<div id="div_comment">
+    [[volist name='BbsComment' id='data' empty="$empty"]]
+    <div class="div-item-[[$data.id]]">
+        <div>
+            <img class="img-face" src="[[$data.face]]" />
+            <a class="a-nickname" href="/user/card/[[$data.user]]">[[$data.nickname]]</a>
+            [[if $data.author]]
+            <span class="layui-badge layui-bg-green">作者</span>
+            [[/if]]
+            <span class="span-number">[[$i+1]]楼</span>
+            [[if $data.user != $currentUser]]
+            <button class="span-at click layui-btn font at-[[$data.id]]" onclick="at('[[$data.user]]', '[[$data.nickname]]', 'at-[[$data.id]]')"> @Ta</button>
+            [[elseif $data.delete == 0/]]
+            <span onclick="comment_del([[$data.id]])" class="span-comment-del layui-badge layui-bg-gray click">删除</span>
+            [[/if]]
+            <span class="span-time">[[$data.time]]</span>
+        </div>
+        <div class="roll comment-[[$data.id]]" data-roll="comment-[[$data.id]]">
+            <div class="div-roll">[[$data.content]]</div>
+        </div>
+        <p class="p-roll-comment-[[$data.id]]"></p>
+    </div>
+    [[/volist]]
+    [[$BbsComment|raw]]
+</div>
+
+<!--评论表单-->
+<div id="div_form">
+    <input type="file" id="input_file" style="display: none" />
+    <input class="input-type" type="hidden" value="[[$type]]" />
+    <input class="input-author" type="hidden" value="[[$author]]" />
+    <input class="input-pageUrl" type="hidden" value="" />
+    <input class="input-pageTitle" type="hidden" value="[[$title]]" />
+    <div class="div-textarea-border">
+        <div class="div-comment layui-textarea" contenteditable="true"></div>
+        <div class="div-btn-group">
+            <button onclick="face()" class="layui-btn font"><i class="fa fa-smile-o"></i> 表情</button>
+            <button class="button-file layui-btn font"><i class="fa fa-file-image-o"></i> 图片</button>
+            <button class="layui-btn font click" onclick="comment([[$id]], [[$bind]])" style="float: right"><i class="fa fa-paper-plane"></i> 发送　</button>
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+<!--篇幅导航-->
+<div id="div_nav">
+    [[if $reviewTitle]]
+    <a href="/bbs/read/[[$type]]/[[$reviewId]].html"><span class="span-direction-1">上一更</span><span class="span-direction-f1"></span>[[$reviewTitle]]</a>
+    [[/if]]
+    [[if $serializeTitle]]
+    <a href="/bbs/read/[[$type]]/[[$serializeId]].html"><span class="span-direction-2">下一更</span><span class="span-direction-f2"></span>[[$serializeTitle]]</a>
+    [[/if]]
+</div>
+
+[[if $reviewTitle || $serializeTitle]]
+<hr/>
+[[/if]]
+
+<!--退出导航-->
+<div id="div_exit_nav">
+    <a href="/bbs/[[$type]].html" class="layui-btn layui-btn-primary click"><i class="fa fa-mail-forward"></i> 返回上级</a>
+    [[if $serializeCount > 1]]
+    <a class="layui-btn layui-btn-primary btn" style="color: #31A089"><i class="fa fa-navicon"></i> 连载目录</a>
+    [[/if]]
+</div>
+
+<!--隐藏的表情选择域-->
+<div id="div_faceList" style="display: none">
+    [[$faceList]]
+</div>

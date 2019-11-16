@@ -1,0 +1,22 @@
+#page_main, .breadcrumb, #footer {
+    background: #FFFFFF;
+}
+
+#div_title, #div_type, #div_source{
+    margin: 5px 2px;
+}
+
+#contents {
+    margin: 4px 2px;
+    min-height: 500px;
+}
+
+#div_source{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#div_source_textarea{
+    height: 70px;
+}

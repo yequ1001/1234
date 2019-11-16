@@ -1,0 +1,29 @@
+<div class="div-header layui-row kyy auto-width">
+    <span class="layui-breadcrumb">
+        <a href="/bbs/[[$type]].html"><i class="fa fa-home"></i> [[$typeName]]</a>
+        <a href="/bbs/[[$type]]/executive">管理员</a>
+        <a><cite>拓展链接</cite></a>
+    </span>
+</div>
+
+<div style="height: 50px"></div>
+
+<p class="p-explain">绝对地址用http或https开头，站内相对地址可以用斜杠/开头。</p>
+
+<div class="div-form">
+    [[volist name="links_arr" id="vo"]]
+    <div class="div-item layui-row">
+        <div class="name layui-col-xs2">
+            名称[[$i]]<br/>
+            地址[[$i]]
+        </div>
+
+        <div class="input layui-col-xs10">
+            <input class="input-name" value="[[$vo.name]]" /><br/>
+            <input class="input-url" value="[[$vo.url]]" />
+        </div>
+    </div>
+    [[/volist]]
+    <button onclick="send()" class="layui-btn layui-btn-fluid layui-btn-normal">更 新</button>
+</div>
+

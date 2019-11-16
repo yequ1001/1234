@@ -1,0 +1,56 @@
+
+    <!-- 后台导航 -->
+    <nav class="breadcrumb rounded-0">
+        <a class="breadcrumb-item" href="/admins"><i class="fa fa-bank"></i> 管理中心</a>
+        <a class="breadcrumb-item" href="#">文章管理</a>
+        <span class="breadcrumb-item active">添加文章</span>
+    </nav>
+
+    <!-- 文章标题 -->
+    <div id="div_title" class="d-flex border p-1">
+        <div class="text-muted">　文章标题：</div>
+        <div class="flex-grow-1"><input id="div_title_input" class="border border-0 w-100 text-dark font-weight-bold text-capitalize" autocomplete="off" /></div>
+        <div class="text-info"><span id="div_title_count">0</span> / 42字</div>
+    </div>
+
+    <!-- 文章类型 -->
+    <div id="div_type" class="d-flex border p-1">
+        <div class="text-muted">　所属类型：</div>
+        <div class="flex-grow-1">
+            <select id="div_type_select" class="border border-0 w-100 text-dark text-center text-capitalize">
+                <option value="aquatic">水生</option>
+                <option value="flower">花卉</option>
+                <option value="succulent">多肉</option>
+                <option value="leaf">绿植</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- 编辑器 -->
+    <script src='/public/ueditor/ueditor.config.js'></script>
+    <script src='/public/ueditor/ueditor.all.min.js'></script>
+    <textarea id="contents" name="contents"></textarea>
+
+    <div id="div_source_and_btn" class="d-flex">
+        <!-- 文章来源 -->
+        <div id="div_source" class="d-flex border p-1">
+            <div class="text-muted"><br/>　文章来源：&nbsp;</div>
+            <div class="flex-grow-1">
+
+                <input name="div_source_input" id="div_source_original" value="original" type="radio"/>
+                <label for="div_source_original">原创&nbsp;&nbsp;&nbsp;</label>
+                <input name="div_source_input" id="div_source_reprint" value="reprint" type="radio" checked="checked"/>
+                <label for="div_source_reprint">转载（如果是转载先选中我，再在以下区域输入详细的文章来源）：</label>
+
+                <textarea id="div_source_textarea" class="w-100 bg-light text-dark border-0 small"
+                          placeholder="点此输入转载来源，示例：微信公众号-XX新闻-作者张三"></textarea>
+            </div>
+        </div>
+
+        <!-- 表单操作按钮组 -->
+        <div id="btn_group" class="d-flex justify-content-around flex-column align-items-center text-center flex-grow-1">
+            <button id="but_send" onclick="send()" class="btn btn-primary">　　提　交　　</button>
+            <button id="but_exit" onclick="location='/admins'" class="btn btn-light text-muted">　　退　出　　</button>
+        </div>
+    </div>
+

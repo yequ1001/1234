@@ -1,0 +1,184 @@
+.layui-btn-container {
+    line-height: 0;
+}
+
+#div_header {
+    text-align: center;
+    background: #FFF;
+    position: fixed;
+    z-index: 100;
+    height: 48px;
+    line-height: 48px;
+}
+    .sel-group {
+        display: flex;
+        margin-bottom: 3px;
+        padding: 10px 12px;
+    }
+    .sel-group input {
+        border: #f0ecf0 1px solid;
+        background: transparent;
+        color: #5d5b5d;
+        height: 32px;
+        border-radius: 4px;
+        font-size: 15px;
+		padding-left: 5%;
+    }
+
+    .sel-group .div_1 {
+        display: inline-block;
+        flex: 3;
+        margin-right: 3px;
+        position: relative;
+        top: -1px;
+    }
+    .sel-group .div_2 {
+        display: inline-block;
+        flex: 2;
+        margin-right: 3px;
+        position: relative;
+        top: -1px;
+    }
+    .layui-btn-container {
+        display: none;
+        position: fixed;
+        right: 0;
+    }
+    #show_op {
+        position: relative;
+        background: #378EF7;
+        flex: 1;
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+.layui-timeline-title {
+    color: #C6CBCB;
+}
+    .light {
+        position: absolute;
+        right: 4px;
+        font-size: 9px;
+        color: #FFFFFF;
+        display: inline-block;
+        border-radius: 2px;
+        background: #A7CB93;
+        padding: 0 5px;
+        height: 14px;
+        line-height: 16px;
+        margin-top: 2px;
+    }
+    .weekend-mark {
+        color: #A2C190;
+    }
+
+#div_list {
+    background: #FFF;
+    padding: 58px 3% 15px 2%;
+}
+    .layui-timeline-title, .layui-timeline-item{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-size: 15px;
+    }
+
+    .div_content{
+        font-size: 15px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+	#div_button a {
+		font-size: 13px;
+        height: 28px;
+        line-height: 28px;
+	}
+	
+#div_list ul {
+    list-style: none;
+}
+
+[class *= "p-"] {
+    color: #414141;
+    padding:0 4px 8px 4px;
+    flex: 5;
+    border-bottom: #F9F9F9 1px solid;
+    margin-right: 1px;
+    max-height: 353px;
+    overflow: auto;
+}
+[class *= "f-"] {
+    color: #414141;
+    padding:0 2px 8px 2px;
+    flex: 1;
+    border-left: #F7F7F7 1px solid;
+    border-bottom: #F9F9F9 1px solid;
+    text-align: center;
+    font-size: 12px;
+    max-height: 353px;
+    overflow: auto;
+}
+[class *= "p-"]:hover, [class *= "f-"]:hover {
+    background: #FFFAF2;
+    border-radius: 3px;
+    border: 0;
+    border-bottom: #FFFAF2 1px solid;
+}
+[class *= "p-"]:focus, [class *= "f-"]:focus {
+    background: #FFFFFF;
+    outline: #FFEDCE 1px solid;
+}
+.hr {
+    width: 85%;
+    background: #eeebf5;
+    height: 1px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    bottom: 5px;
+}
+
+@media screen and (min-width: 1500px) {
+    #show_op{
+        display: none;
+    }
+    #div_button{
+        display: block;
+    }
+    #div_header .layui-btn-container {
+        display: block;
+        right: 5%;
+    }
+    #sel_years {
+        width: 65%;
+    }
+}
+
+[id *= "btn_save"] {
+    position: absolute;
+    z-index: 10;
+    display: none;
+    background: rgba(50,50,50,0.5);
+    color: #FFFFFF;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+[id *= "btn_save"] span {
+    padding: 2px 6px;
+    color: #FFFFFF;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+[id *= "btn_save"] span:hover{
+    color: #edf0f0;
+}
+
+[id *= "btn_save"] span:first-child {
+    border-right: #adadad 1px solid;
+    padding-right: 8px;
+}

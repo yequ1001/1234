@@ -1,0 +1,92 @@
+<div class="div-header layui-row kyy auto-width">
+    <div class="div-title layui-col-xs7">
+        [[$title]]
+    </div>
+    <div class="div-user layui-col-xs5">
+        <a href="/user"><img src="[[$face]]" class="img-face" /> [[$nickname]]</a>
+    </div>
+</div>
+
+<div style="height: 44px"></div>
+
+<div id="diy_header">
+    [[$header]]
+</div>
+
+<div class="div-topList">
+    <div class="div-function">
+        <a href="/bbs/[[$type]].html?essence=1" class="layui-btn layui-btn-primary layui-btn-sm">推荐浏览</a>
+        <a href="/bbs/[[$type]].html?order=click" class="layui-btn layui-btn-primary layui-btn-sm">点击排序</a>
+        <a href="/bbs/[[$type]].html?order=reply" class="layui-btn layui-btn-primary layui-btn-sm">讨论排序</a>
+        <a href="/bbs/[[$type]].html" class="layui-btn layui-btn-primary layui-btn-sm">默认排序</a>
+    </div>
+</div>
+
+<div id="div_list">
+    [[volist name="list" id="vo"]]
+    [[if mb_strlen($vo.imgArr) > 100]]
+    <!--多图模式-->
+    <div class="div-item-[[$vo.id]] div-multiple" onclick="location.href='/bbs/read/[[$type]]/[[$vo.id]].html'">
+        <div><a href="/bbs/read/[[$type]]/[[$vo.id]].html">[[$vo.title]]</a></div>
+        <div class="layui-row">
+			[[$vo.imgArr]]
+        </div>
+        <div><span><i class="fa fa-user"></i> [[$vo.nickname]]</span><span style="text-align: center">[[$vo.click]]浏览</span><span style="text-align: right">[[$vo.time]]</span></div>
+    </div>
+    [[elseif mb_strlen($vo.imgArr) > 1/]]
+    <!--单图模式-->
+    <div class="div-item-[[$vo.id]] div-single layui-row" onclick="location.href='/bbs/read/[[$type]]/[[$vo.id]].html'">
+        <div class="layui-col-xs8 layui-col-md10" style="padding-right: 2px">
+            <p class="p-article-title"><a href="/bbs/read/[[$type]]/[[$vo.id]].html">[[$vo.title]]</a></p>
+            <p><i class="fa fa-user"></i> [[$vo.nickname]]　[[$vo.click]]浏览　[[$vo.time]]</p>
+        </div>
+        <div class="layui-col-xs4 layui-col-md2" style="text-align: center">
+            [[$vo.imgArr]]
+        </div>
+    </div>
+    [[else/]]
+    <!--无图模式-->
+    <div class="div-item-[[$vo.id]] div-nothing" onclick="location.href='/bbs/read/[[$type]]/[[$vo.id]].html'">
+        <div><a href="/bbs/read/[[$type]]/[[$vo.id]].html">[[$vo.title]]</a></div>
+        <div>[[$vo.content]]</div>
+        <div><span><i class="fa fa-user"></i> [[$vo.nickname]]</span><span style="text-align: center">[[$vo.click]]浏览</span><span style="text-align: right">[[$vo.time]]</span></div>
+    </div>
+    [[/if]]
+    [[/volist]]
+</div>
+
+<div class="div-edit">
+    <a class="a1" href="/bbs/[[$type]]/search.html"><i class="fa fa-search"></i> 搜索</a>
+    <a class="a2" href="/bbs/[[$type]]/write?type=save"><i class="fa fa-edit"></i> 写一笔</a>
+    <a class="a3" href="/bbs"><i class="fa fa-globe"></i> 闲逛</a>
+</div>
+
+[[if $footer]]
+<div id="diy_footer">
+    [[$footer]]
+</div>
+[[/if]]
+
+[[if $links]]
+<div class="div-links">
+    <p class="p-title"><span></span> 拓展链接</p>
+    [[volist name="links" id="vo"]]
+    <a href="[[$vo.url]]" target="_blank">[[$vo.name]]</a>
+    [[/volist]]
+</div>
+[[/if]]
+
+<!--页底导航栏-->
+<div id="div_nav">
+    <span class="layui-breadcrumb" lay-separator=" | ">
+      <a href="/diary/month">微日记</a>
+      <a href="/depot/message">建议</a>
+      <a href="/depot/service">客服</a>
+      <a href="/user/search">找人</a>
+      <a href="/bbs/[[$type]]/executive">管理员</a>
+    </span>
+</div>
+
+<div class="div-footer-url">
+    书签 Op112.com/bbs/[[$type]]
+</div>

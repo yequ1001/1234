@@ -1,0 +1,32 @@
+&nbsp;
+<input class="input-error" type="hidden" value="[[$error]]" />
+
+[[if !$error]]
+
+<div class="div-result">
+	<div class="div-title"><span></span>搜索列表</div>
+	<div class="div-list">
+		[[volist name="BbsData" id="vo" empty="　没有匹配到相关的结果"]]
+		<a href="/bbs/[[$vo.id]]"><i class="fa fa-group"></i> [[$vo.name]]</a>
+		[[/volist]]
+	</div>
+</div>
+
+[[if !$Bool]]
+<div class="div-tips" data-keywords="[[$keywords]]">
+    <div class="div-statement">
+	    您也可以创建名为<span class="layui-badge layui-bg-cyan"> [[$keywords]] </span>的论坛。同时为了保护他方版权和服从国家法规，您创建的论坛本站保留更名或注销的权利。<br/>
+	</div>
+	
+	<br/>
+
+    <a class="a-create layui-btn layui-btn-normal layui-btn-fluid">我知道了，确认创建</a>
+
+</div>
+[[/if]]
+
+<div class="div-nav">
+    <a onclick="javascript:history.back(-1);" class="layui-btn layui-btn-primary layui-btn-fluid"><i class="fa fa-mail-forward"></i> 返回上页</a>
+</div>
+
+[[/if]]
